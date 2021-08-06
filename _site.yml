@@ -10,5 +10,5 @@ navbar:
     - text: "Teddy"
       href: about.html
     - text: "CV"
-      href: cv.html
+      href: CV.html
 output: distill::distill_article
