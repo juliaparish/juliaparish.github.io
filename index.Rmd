@@ -1,18 +1,18 @@
 ---
 title: "Julia Parish"
-description: |
-  Aloha! I am using distill
+image: "julia.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/julia-a-parish/"
+  - label: Instagram
+    url: "https://twitter.com/"
+  - label: GitHub
+    url: "https://github.com/juliaparish"
+  - label: Email
+    url: "mailto:julia@juliaparish.site"
+output:
+  postcards::jolla
 site: distill::distill_website
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
-
-```
-
+ 
+My profile
