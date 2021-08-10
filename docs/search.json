@@ -6,7 +6,14 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-06T14:45:50-07:00"
+      "last_modified": "2021-08-10T10:50:13-07:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "My Blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-10T10:50:14-07:00"
     },
     {
       "path": "CV.html",
@@ -14,15 +21,16 @@
       "description": "curriculum vitae",
       "author": [],
       "contents": "\r\n\r\n\r\nggplot(data = diamonds, aes(x = carat, y = price)) + \r\n  geom_point(aes(color = price))\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-06T14:45:58-07:00"
+      "last_modified": "2021-08-10T10:50:21-07:00"
     },
     {
       "path": "index.html",
       "title": "Julia Parish",
+      "description": "Aloha! I am using distill\n",
       "author": [],
-      "contents": "\r\n\r\n          \r\n          \r\n          Website\r\n          \r\n          \r\n          About\r\n          Teddy\r\n          CV\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Julia Parish\r\n          \r\n          \r\n            \r\n              My profile\r\n            \r\n            \r\n              My profile\r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Instagram\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Instagram\r\n                  \r\n                \r\n                                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Email\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
-      "last_modified": "2021-08-06T15:06:07-07:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-10T10:50:22-07:00"
     }
   ],
-  "collections": []
+  "collections": ["posts/posts.json"]
 }
