@@ -28,10 +28,10 @@ html {
   --aside-color:     rgba(0, 0, 0, 0.6);
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
-  --heading-font:    Overlock;
+  --heading-font:    Arapey;
   --mono-font:       monospace;
   --body-font:       sans-serif;
-  --navbar-font:     sans-serif;  /* websites + blogs only */
+  --navbar-font:     Raleway, sans-serif;  /* websites + blogs only */
 }
 
 /*-- ARTICLE METADATA --*/
