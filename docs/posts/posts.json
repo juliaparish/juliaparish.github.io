@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-08-20-santa-catalina-island/",
+    "title": "Santa Catalina Island",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Julia Parish",
+        "url": {}
+      }
+    ],
+    "date": "2021-08-20",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-08-20T15:51:57-07:00",
+    "input_file": "santa-catalina-island.knit.md"
+  },
+  {
     "path": "posts/2021-08-10-a-function-i-learned/",
     "title": "A Function I Learned",
     "description": "A short description of the post.",
