@@ -1,5 +1,10 @@
 ---
 title: "About this site"
+image: 
+links:
+  - label:
+    
+output:
 description: |
   Some additional details about the website
 ---

@@ -1,7 +1,10 @@
 ---
 title: "Julia Parish"
+image: "Santa_Cruz_JAP.jpg"
 description: |
   I am using distill
+output:
+  postcards::jolla
 site: distill::distill_website
 ---
 
