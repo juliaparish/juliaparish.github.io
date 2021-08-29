@@ -1,0 +1,36 @@
+# Theme metadata
+name = "grace"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#CC9999"
+
+# Menu
+menu_primary = "#fdfdfd"
+menu_text = "#373737"
+menu_text_active = "#CC9999"
+menu_title = "#373737"
+
+# Backgrounds
+background = "#f4f4f4"
+home_section_odd = "#f4f4f4"
+home_section_even = "#fdfdfd"
+
+
+
+
+
+
+
+# Menu
+#menu_primary = "#fff" # menu background 
+#menu_text = "#8e8d8a" # menu tabs
+##menu_text_active = "#3AA8AB" # current section 
+##menu_title = "#2b2b2b" # name 
+
+
+# Home sections
+#home_section_odd = "rgb(255, 255, 255)" # white
+#home_section_even = "rgb(247, 247, 247)" # light gray
