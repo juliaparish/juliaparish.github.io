@@ -51,7 +51,7 @@ d-byline {
 /*-- ARTICLE APPENDIX --*/
 d-appendix {
   --heading-size:    15px;
-  --heading-color:   rgba(0, 0, 0, 0.65);
+  --heading-color:   #fffdf0;
   --text-size:       0.8em;
   --text-color:      rgba(0, 0, 0, 0.5);
 }
@@ -61,17 +61,17 @@ d-appendix {
 
 .distill-site-header {
   --title-size:       30px;
-  --text-color:       rgba(86, 99, 97, 1); 
-  --text-size:        16px;
-  --hover-color:      white;
-  --bkgd-color:       rgba(94, 50, 50, 0.8);
+  --text-color:       #fffdf0; 
+  --text-size:        14px;
+  --hover-color:      #f8dec4;
+  --bkgd-color:       #f8c4c4;
 }
 
 .distill-site-footer {
-  --text-color:       rgba(255, 255, 255, 0.8);
-  --text-size:        15px;
+  --text-color:       rgba(255, 255, 255, 0.8); 
+  --text-size:        16px;
   --hover-color:      white;
-  --bkgd-color:       #0F2E3D;
+  --bkgd-color:       rgba(94, 50, 50, 0.8);
 }
 
 /*-- Additional custom styles --*/
