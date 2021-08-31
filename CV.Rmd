@@ -92,27 +92,24 @@ library(tidyverse)
 
 -	**Parish, J.** "Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses," Poster, Island Invasives Symposium. Dundee, Scotland. July 2017
 
--	**Parish, J.** “Prioritizing Miconia calvescens Survey on Oahu,” Presentation, California Invasive Plant Council Symposium, San Diego, CA. October 2015
+-	**Parish, J.** “Prioritizing *Miconia calvescens* Survey on Oahu,” Presentation, California Invasive Plant Council Symposium, San Diego, CA. October 2015
 
 -	**Parish, J.** “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI.” Poster. Hawaii Conservation Conference. Honolulu, HI August 2010
 
--	**Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of Paraponera clavata to chemical compounds in ethnobotanically important plant species.” NSF REU Internship Summer Research Presentation La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. August 2006
+-	**Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of *Paraponera clavata* to chemical compounds in ethnobotanically important plant species.” NSF REU Internship Summer Research Presentation La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. August 2006
 
 ## Honors and Awards
 
 - National Science Foundation and Duke University Research Education for Undergraduates Internship
 award: Puerto Viejo de Sarapiqui, Costa Rica June 2006
 
-- University of Hawai’i School for Ocean Ecology, Science and Technology Tuition Waiver for Academic
+- University of Hawaii School for Ocean Ecology, Science and Technology Tuition Waiver for Academic
 Excellence: Honolulu, HI Fall 2005
 
-- University of Hawai’i Dean’s List: Honolulu, HI Spring 2004 – Spring 2005
+- University of Hawaii Dean’s List: Honolulu, HI Spring 2004 – Spring 2005
 
 - Benjamin Gillman International Scholarship: Honolulu, HI August 2004
 
-- Hawai’i Pacific Academic Achievement and Community Service Scholarship: Honolulu, HI Spring 2003
-
-- Hawai’i Pacific University Dean’s List: Honolulu, HI Fall 2002 – Fall 2003
 	
 ## Professional Affiliations
 
