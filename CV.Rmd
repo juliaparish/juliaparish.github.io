@@ -12,128 +12,66 @@ library(tidyverse)
 
 ## **Education**
 **Master of Environmental Data Science** | Expected 2022
-Bren School of Environmental Science & Management
-University of California, Santa Barbara
+<br>&nbsp;Bren School of Environmental Science & Management
+<br>&nbsp;University of California, Santa Barbara
 
 **Bachelor of Arts in Interdisciplinary Studies**| May 2007
-Emphasis: Environmental Studies, Latin America Studies
-University of Hawaii at Manoa
+<br>&nbsp;Emphasis: Environmental Studies
+<br>&nbsp;University of Hawaii at Manoa
 
 ## **Professional Experience**
 
 **American Conservation Experience** | San Diego, CA
-*Restoration Specialist* | April 2020 to July 2021
+<br>*Restoration Specialist* | April 2020 to July 2021
 
 -	Served as the project manager for two field crews controlling two invasive species, velvet tree (*Miconia calvescens*), and coqui frog (*Eleutherodactylus coqui*) on the island of Maui, Hawaii.
--	Directed and trained crews in restoration methods, field survey methods, and pesticide application procedures.
--	Developed management plans based on knowledge of integrated pest management, including approaches to prevent, control, and eradicate high priority invasive species.
--	Organized and processed field data and produced graphics and figures for federal grant reports.
-
-*Selected Contributions*:
-* Awarded a $320,000 grant from the National Fish and Wildlife Foundation’s Pacific Southwest Fuels Management Strategic Investments Partnership for fuels thinning in the San Gabriel Mountains National Monument.
-* Assisted with designing digital project databases and determining project measurables to collect field data using tablet devices.
+-	Assisted with designing digital project databases and determining project measurables to collect field data using tablet devices.
 
 **American Conservation Experience** | San Diego County, CA
-*Director* | June 2018 to March 2020
+<br>*Director* | June 2018 to March 2020
 
--	Solicited, planned, scheduled, and tracked restoration and trail projects implemented by over 100 conservation corpsmembers.  
--	Obtained and managed more than twenty project agreements by ensuring projects stayed within budget parameters and met performance goals.
--	Recruited, supervised, and mentored twelve staff members and supervised hundreds of AmeriCorps volunteers. 
--	Served as subject matter expert on the impacts of invasive species and pests on wildlife and plants in Southern California. 
--	Maintained relationships with Federal, State, and non-profit agency project sponsors. 
-
-*Selected Contributions*:
 - Annually contracted $1.2m in conservation projects on federal, state, county, and private lands.
-- Established a new division of operations within a national non-profit organization. 
+-	Solicited, planned, scheduled, and tracked restoration and trail projects implemented by over 100 conservation corpsmembers.  
 
 **Catalina Island Conservancy** | Avalon, CA
-*Plant Conservation Manager*, April 2015 to June 2018
+<br>*Plant Conservation Manager* | April 2015 to June 2018
 
 -	Facilitated the recovery of chaparral and coastal sage scrub habitats by directing implementing an invasive plant management program. 
--	Monitored island plant communities and documented changes in species populations. 
--	Conducted early detection surveys for incipient weed species. 
--	Applied knowledge of invasion ecology to the management of natural resources on an oceanic island off the coast of California. 
 -	Updated and managed the invasive plant project ArcGIS and Access databases.
--	Performed human resources duties, including administering payroll and employee records, completion of employee performance evaluations, and managed budgetary guidelines. 
--	Implemented safety policies and procedures, including annual pesticide training for staff based on the California Department of Pesticide Regulations guidelines. 
--	Supervised a team of staff, interns, and contracted field crews of up to six members. 
-Selected Contributions:
-•	Raised $450K for restoration projects through various funding sources, including government agencies, foundations, and private sources.
-•	Created ten new operating procedures to streamline field and office tasks, increasing overall efficiency and productivity. 
+
 
 **Oahu Invasive Species Committee** | Honolulu, HI
-*Manager* December 2012 to April 2015
+<br>*Manager* | December 2012 to April 2015
 
 -	Performed strategic planning, fundraising, and public outreach functions surrounding the eradication of highly invasive plant species. 
--	Developed annual invasive species management action plans containing measurable and obtainable goals. 
--	Implemented prevention, control, and eradication projects using integrated pest management practices, including biological, cultural, mechanical, and chemical tools. 
--	Established quantifiable measures of success to eradicate twelve incipient target species such as Miconia calvescens and Pennisetum setaceum.  
--	Represented the Little Fire Ant Emergency Response Team at bi-weekly media events and provided regular updates on detection and eradication efforts to state agencies and legislators.
--	Developed annual action plans for the management of target species and spearheaded approval by OISC’s steering committee composed of county, state, and federal agencies. 
--	Communicated ecological concepts of invasion biology and federal and state regulations pertaining to invasive species to community groups, state and federal representatives, and local media. 
--	Supervised a team of sixteen, including field crews, botanists, and administrative staff.
-Selected Contributions:
-•	Raised $1.2M funding in one year through competitive grant proposals. 
-•	Collaborated with various state, local, and federal agencies to create the Chromolaena Odorata Working Group, tasked with developing a statewide eradication plan for this incipient species.
- 
+-	Raised $1.2M funding in one year through competitive grant proposals. 
+
 **Center for Conservation Research and Training at the University of Hawaii, Kure Atoll Wildlife Sanctuary** | Honolulu, HI
-*CCRT Field Project Support Assistant* August 2010 to December 2012
+<br>*CCRT Field Project Support Assistant* | August 2010 to December 2012
 
--	Implemented the first two years of a 10-year restoration project to eradicate Golden crownbeard (Verbesina encelioides) using manual, mechanical, and chemical methodologies on a remote atoll in Papahanumokuakea Marine National Monument.
--	Aided with the planning and implementation of monitoring and research projects involving wildlife species and their habitats.
--	Implemented plant propagation, greenhouse maintenance, and out-planting of federally listed and common native Hawaiian species. 
+-	Implemented the first two years of a 10-year restoration project to eradicate Golden crownbeard (*Verbesina encelioides*) using manual, mechanical, and chemical methodologies on a remote atoll in Papahanumokuakea Marine National Monument.
+-	Organized three seasonal remote field camps by recruiting two staff and eight volunteers, coordinating transit from Honolulu to Kure Atoll, and procuring supplies over a two-year period.
 -	Collected and analyzed data on the life history and ecology of seabirds, plants, mammals, and other wildlife species. 
--	Captured adult and juvenile seabirds for banding, measurement data collection, and blood sampling.
--	Assessed body condition of brooding seabird species to detect individual health conditions, including hydration levels and the plastic load in their bowels.
--	Performed nest searches, egg counts, and nest monitoring to determine fledging success and population density. 
--	Aided in monitoring, tagging, trans-locating, administering medical treatments and disentanglement of the endangered Hawaiian monk seal (Monachus schauinslandi).
--	Responded to wildlife emergencies, such as injuries or entanglements in marine debris. 
--	Acted as liaison between various local and state agencies to manage natural and cultural resources. 
--	Authored weekly, monthly, and yearly reports detailing the design and implementation of natural resource management and monitoring projects. 
--	Collaborated in developing a multi-agency emergency response plan for remote North West Hawaiian Islands field camp operations.
-
-Selected Contributions:
-•	Organized three seasonal remote field camps by recruiting two staff and eight volunteers, coordinating transit from Honolulu to Kure Atoll, and procuring supplies over a two-year period.
-•	Co-developed an itemized budget for a $650,000 National Fish and Wildlife Foundation Keystone Initiative – Pacific Seabirds grant.
-
+ 
 **Center for Environmental Management of Military Lands** | Hilo, HI
-*Incipient Weed Control Biologist | Research Assistant II* November 2008 to July 2010
+<br>*Incipient Weed Control Biologist | Research Assistant II* | November 2008 to July 2010
 
--	Performed risk assessments on all introduced plant species to determine the likelihood of invasion and identified new native or introduced species. 
--	Controlled invasive plants surrounding endangered plant populations by implementing chemical and manual methods. 
--	Constructed fencing for protection and ease of identification around remote plant populations.
--	Deployed detectors to monitor for the Hawaiian hoary bat population.
+-	Created the incipient invasive species detection program for the Department of Defense’s 53,823-hectare Pohakuloa Training Area (PTA) military base.
 -	Managed spatial data for the incipient invasive plant program in ArcGIS and a Microsoft Access database.
--	Performed identification of native and introduced plant and animal species, including the federally listed nene, or Hawaiian goose, (Branta sandvicensis) and pōpolo kū mai, or Hawaiian prickle leaf, (Solanum incompletum).
--	Assessed ecological risks to federally listed endangered plant species.
--	Assisted in scheduling, planning, and documentation of field work and operations.
--	Conducted plant monitoring and surveys: line transects, roadside surveys, quadrat sampling, photo plots.
-
-Selected Contributions:
-•	Created the incipient weed detection program for the Department of Defense’s 53,823-hectare Pohakuloa Training Area (PTA) military base.
-•	Served as the subject matter expert on invasion ecology for the Natural Resource Office of PTA.
 
 **Oahu Invasive Species Committee** | Honolulu, HI
-*Outreach Specialist* December 2007 to November 2008
+<br>*Outreach Specialist* | December 2007 to November 2008
 
--	Worked with landowners to secure access permission to their land for the purposes of invasive species survey and control.
 -	Managed database of private property owners, outreach events, and volunteer lists in Microsoft Access. 
 -	Answered public inquiries about invasive species and natural resource management with professionalism. 
 -	Collaborated with outside agencies to prioritize State-wide outreach needs and goals. 
 
-Selected Contributions:
--	Increased public awareness of invasive species through the introduction of public outreach and educational programs presented at community and school gatherings.
--	Led monthly volunteer service trips and events to remove invasive plant species.
-
 **Oahu Invasive Species Committee** | Honolulu, HI 
-*AmeriCorps Field Technician Member* December 2006 - November 2007
+<br>*AmeriCorps Field Technician Member* | December 2006 - November 2007
 
--	Gained knowledge of native, introduced, and invasive biota.
--	Compiled data using GPS tools and ArcGIS software for tracking locations of invasive species.
--	Located and controlled invasive plants through field work and aerial surveys in rugged terrain.
--	Obtained comprehension of weed control techniques including the use of herbicides. 	
 
 ## Certifications and Licenses
+
 - Mental Health First Aid USA, 2021
 
 - California Qualified Applicator License, 2017
@@ -151,6 +89,7 @@ Selected Contributions:
 -	**Parish, J.** 2010. “Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA.” Ecosystems Management Program Bulletin 48:4-6.
 
 ## Presentations & Posters
+
 -	**Parish, J.** "Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses," Poster, Island Invasives Symposium. Dundee, Scotland. July 2017
 
 -	**Parish, J.** “Prioritizing Miconia calvescens Survey on Oahu,” Presentation, California Invasive Plant Council Symposium, San Diego, CA. October 2015
@@ -160,6 +99,7 @@ Selected Contributions:
 -	**Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of Paraponera clavata to chemical compounds in ethnobotanically important plant species.” NSF REU Internship Summer Research Presentation La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. August 2006
 
 ## Honors and Awards
+
 - National Science Foundation and Duke University Research Education for Undergraduates Internship
 award: Puerto Viejo de Sarapiqui, Costa Rica June 2006
 
@@ -176,27 +116,27 @@ Excellence: Honolulu, HI Fall 2005
 	
 ## Professional Affiliations
 
-- Member, Board Member, Secretary, **President**, California Invasive Plant Council 2017 – Present
+- Member, Board Member, Secretary, **President** | California Invasive Plant Council 2017 – Present
 
-- **Member**, California Native Plant Society – Channel Islands, South Coast, San Diego Chapters 2016 – Present
+- **Member** | California Native Plant Society – Channel Islands, South Coast, San Diego Chapters 2016 – Present
 
-- **Member**, Society for Ecological Restoration 2019 – Present 
+- **Member** | Society for Ecological Restoration 2019 – 2021 
 
-- **Member**, San Diego County Weed Management Area 2018 – Present 
+- **Member** | San Diego County Weed Management Area 2018 – 2021 
 
-- **Board Member**, Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019
+- **Board Member** | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019
 
-- **Member**, Board Member, Southern California Botanical Society 2017 - 2018
+- **Member** | Board Member, Southern California Botanical Society 2017 - 2018
 
-- **Member**, Los Angeles County Weed Management Area 2015 - 2018
+- **Member** | Los Angeles County Weed Management Area 2015 - 2018
 
-- **Member**, Coordinating Group on Alien Pest Species 2008, 2013
+- **Member** | Coordinating Group on Alien Pest Species 2008, 2013
 
-- **Member**, Hawai'i Invasive Species Council Working Groups 2008, 2013
+- **Member** | Hawaii Invasive Species Council Working Groups 2008, 2013
 
-- **Member**, O'ahu Coqui Frog Working Group 2013
+- **Member** | Oahu Coqui Frog Working Group 2013
 
-- **Volunteer**, Midway Atoll National Wildlife Refuge 2010, 2011, 2012
+- **Volunteer** | Midway Atoll National Wildlife Refuge 2010, 2011, 2012
 
 
 
