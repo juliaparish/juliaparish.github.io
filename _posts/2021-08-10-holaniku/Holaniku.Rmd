@@ -3,11 +3,19 @@ title: "Holaniku"
 description: |
   An introduction to a remote atoll that I once called home
 author:
-  - name: Julia Parish
+  - first_name: "Julia"
+    last_name: "Parish"
+    url: https://github.com/juliaparish
+    orchid_id: 0000-0002-8323-6574
 date: 08-10-2021
-output:
+  output:
   distill::distill_article:
     self_contained: false
+    toc: true # add a table of contents
+    toc_float: true #float it (positioned on the left)
+categories:
+  - distill
+  - R
 preview: images/Holaniku.jpg
 ---
 
@@ -20,4 +28,6 @@ Holaniku is known as the Kure Atoll state wildlife sanctuary, and is located 140
 
 
 
+## Corrections {.appendix}
 
+If you see any mistakes or would like to suggest changes, please create an issue # insert link # on the source repository.

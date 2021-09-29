@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Julia Parish</title>
+    <link>juliaparish.github.io</link>
+    <atom:link href="juliaparish.github.io/post.xml" rel="self" type="application/rss+xml"/>
+    <description>Website
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Fri, 20 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Santa Catalina Island</title>
+      <dc:creator>Julia Parish</dc:creator>
+      <link>juliaparish.github.io/posts/2021-08-20-santa-catalina-island</link>
+      <description>A short description of the post.</description>
+      <guid>juliaparish.github.io/posts/2021-08-20-santa-catalina-island</guid>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Holaniku</title>
+      <dc:creator>Julia Parish</dc:creator>
+      <link>juliaparish.github.io/posts/2021-08-10-holaniku</link>
+      <description>An introduction to a remote atoll that I once called home</description>
+      <category>distill</category>
+      <category>R</category>
+      <guid>juliaparish.github.io/posts/2021-08-10-holaniku</guid>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+      <media:content url="juliaparish.github.io/posts/2021-08-10-holaniku/images/Holaniku.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>

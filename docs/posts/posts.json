@@ -23,14 +23,17 @@
     "author": [
       {
         "name": "Julia Parish",
-        "url": {}
+        "url": "https://github.com/juliaparish"
       }
     ],
     "date": "2021-08-10",
-    "categories": [],
+    "categories": [
+      "distill",
+      "R"
+    ],
     "contents": "\r\nHolaniku is known as the Kure Atoll state wildlife sanctuary, and is located 1400 miles (2300 km) northwest of Honolulu, Hawaii at 28° 25’N latitude and 178° 20’ W longitude. The sanctuary is managed by the State of Hawaii Division of Land and Natural Resources (DLNR) Division of Forestry and Wildlife (DOFAW) and is a part of the Papahanaumokuakea Marine National Monument (PMNM) created in 2006. In 1978, Holaniku was included in the Hawaii State Seabird Sanctuary system.\r\n\r\n\r\n\r\n",
     "preview": "posts/2021-08-10-holaniku/images/Holaniku.jpg",
-    "last_modified": "2021-08-20T15:40:55-07:00",
+    "last_modified": "2021-09-29T14:00:09-07:00",
     "input_file": {}
   }
 ]
