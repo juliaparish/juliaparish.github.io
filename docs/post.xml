@@ -19,24 +19,5 @@
       <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
       <media:content url="juliaparish.github.io/posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/laal.JPG" medium="image" type="image/jpeg"/>
     </item>
-    <item>
-      <title>Santa Catalina Island</title>
-      <dc:creator>Julia Parish</dc:creator>
-      <link>juliaparish.github.io/posts/2021-08-20-santa-catalina-island</link>
-      <description>A short description of the post.</description>
-      <guid>juliaparish.github.io/posts/2021-08-20-santa-catalina-island</guid>
-      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Holaniku</title>
-      <dc:creator>Julia Parish</dc:creator>
-      <link>juliaparish.github.io/posts/2021-08-10-holaniku</link>
-      <description>An introduction to a remote atoll that I once called home</description>
-      <category>distill</category>
-      <category>R</category>
-      <guid>juliaparish.github.io/posts/2021-08-10-holaniku</guid>
-      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="juliaparish.github.io/posts/2021-08-10-holaniku/images/Holaniku.jpg" medium="image" type="image/jpeg"/>
-    </item>
   </channel>
 </rss>
