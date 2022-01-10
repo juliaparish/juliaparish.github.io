@@ -8,7 +8,7 @@ author:
     url: https://github.com/juliaparish
     orchid_id: 0000-0002-8323-6574
 date: 2022-01-09
-#bibliography: bibliography.bib
+bibliography: bibliography.bib
 output:
   distill::distill_article:
     self_contained: false
@@ -47,20 +47,22 @@ library(sjPlot)
 
 <figcaption>
 
-The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atoll, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest. 
+The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands that serve as nesting habitat for these seabirds are at high risk of inundation from tsunami events. *Image Credit: Kure Atoll Conservancy*
 
 </figcaption>
 
 </figure>
+## Objective
+
 
 ## Analysis Plan
 
 This analysis will follow the specific steps outlined in Table 1 below:
+
 ```{r}
-data.frame("Phase" = c(1:7),
+data.frame("Phase" = c(1:6),
            "Description" = c("Identify research question",
                              "Collect data",
-                             "Describe data",
                              "Visualize data",
                              "Conduct regression analysis",
                              "Interpret results",
@@ -73,21 +75,13 @@ data.frame("Phase" = c(1:7),
   row_spec(0, bold = T, color = "black")
 ```
 
+## Collect Data
+
+
+
 ```{r band data, include = FALSE}
 # read in banding data
 albie_band <- read_csv(here("_posts", "2022-01-09-hawaii-albatross-tohoku-tsunami", "data", "laal_bfal_ca_hi_bbl2021.csv")) #both bfal and laal banding data for CA and HI
-```
-
-```{r explore data, include = FALSE}
-# explore banding data
-
-# head(albie_band)
-# unique(albie_band$event_year)
-# unique(albie_band$species_name)
-# unique(albie_band$event_date)
-# unique(albie_band$iso_subdivision)
-# class(albie_band$event_date)
-# class(albie_band$event_year)
 ```
 
 ```{r tidy banding data, include = FALSE}
@@ -107,11 +101,6 @@ albie_band <- albie_band %>%
  
 ```
 
-```{r explore tidy band data}
-# unique(albie_band$iso_subdivision)
-# class(albie_band$year)
-```
-
 ```{r}
 # convert database to sf element to create geom
 albie_sf <- st_as_sf(albie_band, 
@@ -119,6 +108,9 @@ albie_sf <- st_as_sf(albie_band,
                        crs = 4326)
 
 ```
+
+## Visulize Data
+
 
 ```{r create HI map}
 # bounding box for Hawaii
@@ -166,8 +158,8 @@ albie_map
  
 ```
 
-```{r}
-ggsave(here("images/fig1_albatross_map.png"), plot = albie_map)
+```{r, include = FALSE}
+ggsave(here("_posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/fig1_albatross_map.png"), plot = albie_map)
 ```
 
 ```{r}
@@ -212,8 +204,8 @@ albie_count_plot <- ggplot(band_count, aes(x = year, y = total, group = species)
 albie_count_plot
 ```
 
-```{r}
-ggsave(here("images/fig2_species_count_plot.png"),
+```{r, include = FALSE}
+ggsave(here("_posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/fig2_species_count_plot.png"),
        plot = albie_count_plot,
        width = 6,
        height = 4,
@@ -238,7 +230,7 @@ bfal_count <- split(band_count, band_count$species)[[1]]
 laal_count <- split(band_count, band_count$species)[[2]]
 ```
 
-```{r}
+```{r, include = FALSE}
 # explore population data 1996 - 2021
 
 bfal_mean <- round(mean(bfal_count$total), 2)
@@ -266,7 +258,7 @@ laal_pop_params <- laal_count %>%
 
 ```
 
-```{r pop params summary df}
+```{r pop params summary df, include = FALSE}
 #combine the two population params data sets with bind_rows
 
 pop_params_summary <- bind_rows(bfal_pop_params, laal_pop_params) 
@@ -289,7 +281,7 @@ pop_params_table <- knitr::kable(pop_params_summary,
 pop_params_table 
 ```
 
-```{r}
+```{r, include = FALSE}
 # filter species by pre and post tsunami event
 bfal_pre <- bfal_count %>% 
   filter(year %in% c(2002:2010))
@@ -305,7 +297,7 @@ laal_post <- laal_count%>%
 
 ```
 
-```{r}
+```{r, include = FALSE}
 # mean population of species pre and post tsunami event
 
 mean_pre_bfal <- round(mean(bfal_pre$total), 2)
@@ -316,27 +308,32 @@ mean_post_laal <- round(mean(laal_post$total), 2)
 
 ```
 
-```{r}
-
+```{r, include = FALSE}
 pop_mean <- tibble(species = c("BFAL", "LAAL"),
-                       mean_pre = c(mean_pre_bfal, mean_pre_laal),
-                       mean_post = c(mean_post_bfal, mean_post_laal))
+                   mean_pre = c(mean_pre_bfal, mean_pre_laal),
+                   mean_post = c(mean_post_bfal, mean_post_laal))
+```
 
+```{r}
 pop_mean_table <- knitr::kable(pop_mean,
                                col.names = c('Species', 'Pre_Pop_Mean', 'Post_Pop_Mean'),
                                caption = "Table 3: Hawaii Albatross Count Means Pre- & Post- Tōhoku Tsunami") %>% 
   kable_classic(full_width = F, html_font = "Cambria") #%>% 
-  #save_kable(file = "albie_mean_pops.png",
-             #zoom = 1.5)
-
-pop_mean_table
+  # save_kable(file = "images/albie_mean_pops.png",
+  #            zoom = 1.5)
 ```
 
 ```{r}
+pop_mean_table
+```
+
+```{r, include = FALSE}
 # save mean population data 
 #write.csv(pop_mean, file = file.choose(new = T))
 
 ```
+
+## Conduct Regression Analysis 
 
 ```{r}
 bfal_qqplot <- ggplot(bfal_count) +
@@ -359,8 +356,8 @@ bfal_qqplot
   
 ```
 
-```{r}
-ggsave(here("images/fig3_bfal_qqplot.png"),
+```{r, include=FALSE}
+ggsave(here("_posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/fig3_bfal_qqplot.png"),
        width = 4,
        height = 4,
        units = "in",
@@ -389,8 +386,8 @@ laal_qqplot <- ggplot(laal_count) +
 laal_qqplot  
 ```
 
-```{r}
-ggsave(here("images/fig4_laal_qqplot.png"),
+```{r, include=FALSE}
+ggsave(here("_posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/fig4_laal_qqplot.png"),
        width = 4,
        height = 4,
        units = "in",
@@ -433,5 +430,20 @@ tab_model(interaction_model,
           digits = 4)
 ```
 
+## Interpret Results
 
+
+
+## Conclusion
+
+
+## Corrections {.appendix}
+
+If you see mistakes or want to suggest changes, please [create an issue](https://github.com/juliaparish/juliaparish.github.io/issues) on the source repository.
+
+## Source Code {.appendix}
+
+Find the source code for this blog post [here](https://github.com/juliaparish/eds222_final).
+
+## References {.appendix}
 
