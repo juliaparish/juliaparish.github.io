@@ -19,7 +19,7 @@ draft: false
 categories:
   - R
   - GIS
-preview: images/laal.jpg
+preview: images/laal.JPG
 ---
 
 ```{r setup, include = FALSE}
