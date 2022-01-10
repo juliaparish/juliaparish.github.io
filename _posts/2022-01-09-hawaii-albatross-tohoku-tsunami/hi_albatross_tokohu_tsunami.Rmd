@@ -47,14 +47,18 @@ library(sjPlot)
 
 <figcaption>
 
-The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands that serve as nesting habitat for these seabirds are at high risk of inundation from tsunami events [@Reynolds:2017]. *Image Credit: Kure Atoll Conservancy*
+This is an image of Holaniku, also know as Kure Atoll, the northernmost landmass in the Hawaiian archipelago. It is located at 28.3925° N, 178.2936° W and is within the Papahanaumokuakea National Marine Monument. *Image Credit: Kure Atoll Conservancy*
 
 </figcaption>
 
 </figure>
-## Objective
+## Introduction
 
+The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands that serve as nesting habitat for these seabirds are at high risk of inundation from tsunamis [@Reynolds:2017]. On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives and thousands of marine and terrestrial species were killed or maimed. 
 
+Albatross live to be over 65 years old, have the largest wingspan of any bird, are monogamous rearers, and have nest-site fidelity (meaning they return to the same nest location every year). Three species of albatross breed in Hawaii, the Laysan (*Phoebastria immutabilis*), Black-footed (*Phoebastria nigripes*), and Short-tailed (*Phoebastria albatrus*) albatross. Laysan albatross are listed as near threatened due to threats from climate change to their habitat and breeding grounds and long-line fishing operations [@Arata:2009]. The Short-tailed albatross almost went extinct in the early 1900s due to feather hunters and is currently listed as an endangered species in the United States[@usfws:stal]. The UCN Red List of Threatened Species assessed the Black-footed albatross as near threatened in 2020[@iucn:2020]. 
+
+Researchers estimated the Tōhoku tsunami that between 26% - 52% of all Black-footed albatross nests and more than 275,000 albatross nests flooded from inundation waters throughout the Northwestern Hawaiian Islands [@Reynolds:2017]. This post will attempt to analysis and quantify the impact of the Tōhoku tsunami on two Hawaiian albatross species, Laysan and Black-footed albatross. The Short-tailed albatross was not included in the analysis as there is only one breeding pair in Hawaii. 
 
 
 ## Analysis Plan
