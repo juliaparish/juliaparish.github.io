@@ -6,11 +6,11 @@ base_url: juliaparish.github.io
 output_dir: "docs"
 navbar:
   right:
-    - text: "About"
+    - text: "Biography"
       href: index.html
-    - text: "CV"
+    - text: "Resume"
       href: CV.html
-    - text: "Post"
+    - text: "Posts"
       href: post.html
   source_url: https://github.com/juliaparish/juliaparish.github.io    
 output: distill::distill_article

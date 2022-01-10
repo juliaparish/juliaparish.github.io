@@ -9,74 +9,43 @@ library(tidyverse)
 
 ```
 
-
 ## **Education**
 **Master of Environmental Data Science** | Expected 2022
 <br>&nbsp;Bren School of Environmental Science & Management
 <br>&nbsp;University of California, Santa Barbara
 
-**Bachelor of Arts in Interdisciplinary Studies**| May 2007
+**Bachelor of Arts in Interdisciplinary Studies** | May 2007
 <br>&nbsp;Emphasis: Environmental Studies
 <br>&nbsp;University of Hawaii at Manoa
 
 ## **Professional Experience**
 
 **American Conservation Experience** | San Diego, CA
-<br>*Restoration Specialist* | April 2020 to July 2021
+<br>- *Restoration Specialist* | April 2020 to July 2021
+<br>- *Director* | June 2018 to March 2020
 
--	Served as the project manager for two field crews controlling two invasive species, velvet tree (*Miconia calvescens*), and coqui frog (*Eleutherodactylus coqui*) on the island of Maui, Hawaii.
--	Assisted with designing digital project databases and determining project measurables to collect field data using tablet devices.
+**Plant Conservation Manager** | April 2015 to June 2018
+<br>*Catalina Island Conservancy* | Avalon, CA
 
-**American Conservation Experience** | San Diego County, CA
-<br>*Director* | June 2018 to March 2020
+**Director** | December 2012 to April 2015<br>
+*Oahu Invasive Species Committee* | Honolulu, HI
 
-- Annually contracted $1.2m in conservation projects on federal, state, county, and private lands.
--	Solicited, planned, scheduled, and tracked restoration and trail projects implemented by over 100 conservation corpsmembers.  
+**CCRT Field Project Support Assistant** | August 2010 to December 2012<br>
+*Center for Conservation Research and Training at the University of Hawaii* | Honolulu, HI & Kure Atoll Wildlife Sanctuary 
 
-**Catalina Island Conservancy** | Avalon, CA
-<br>*Plant Conservation Manager* | April 2015 to June 2018
+*Center for Environmental Management of Military Lands* | Hilo, HI
+<br>- **Botanist | Research Assistant I** | November 2008 to June 2009
+<br>- **Incipient Weed Control Biologist | Research Assistant II** | July 2009 to July 2010
 
--	Facilitated the recovery of chaparral and coastal sage scrub habitats by directing implementing an invasive plant management program. 
--	Updated and managed the invasive plant project ArcGIS and Access databases.
-
-
-**Oahu Invasive Species Committee** | Honolulu, HI
-<br>*Manager* | December 2012 to April 2015
-
--	Performed strategic planning, fundraising, and public outreach functions surrounding the eradication of highly invasive plant species. 
--	Raised $1.2M funding in one year through competitive grant proposals. 
-
-**Center for Conservation Research and Training at the University of Hawaii, Kure Atoll Wildlife Sanctuary** | Honolulu, HI
-<br>*CCRT Field Project Support Assistant* | August 2010 to December 2012
-
--	Implemented the first two years of a 10-year restoration project to eradicate Golden crownbeard (*Verbesina encelioides*) using manual, mechanical, and chemical methodologies on a remote atoll in Papahanumokuakea Marine National Monument.
--	Organized three seasonal remote field camps by recruiting two staff and eight volunteers, coordinating transit from Honolulu to Kure Atoll, and procuring supplies over a two-year period.
--	Collected and analyzed data on the life history and ecology of seabirds, plants, mammals, and other wildlife species. 
- 
-**Center for Environmental Management of Military Lands** | Hilo, HI
-<br>*Incipient Weed Control Biologist | Research Assistant II* | November 2008 to July 2010
-
--	Created the incipient invasive species detection program for the Department of Defense’s 53,823-hectare Pohakuloa Training Area (PTA) military base.
--	Managed spatial data for the incipient invasive plant program in ArcGIS and a Microsoft Access database.
-
-**Oahu Invasive Species Committee** | Honolulu, HI
-<br>*Outreach Specialist* | December 2007 to November 2008
-
--	Managed database of private property owners, outreach events, and volunteer lists in Microsoft Access. 
--	Answered public inquiries about invasive species and natural resource management with professionalism. 
--	Collaborated with outside agencies to prioritize State-wide outreach needs and goals. 
-
-**Oahu Invasive Species Committee** | Honolulu, HI 
-<br>*AmeriCorps Field Technician Member* | December 2006 - November 2007
-
+*Oahu Invasive Species Committee* | Honolulu, HI
+<br>- **Outreach Specialist** | December 2007 to November 2008
+<br>- **Field Technician (AmeriCorps)** | December 2006 - November 2007
 
 ## Certifications and Licenses
 
-- Mental Health First Aid USA, 2021
-
-- California Qualified Applicator License, 2017
-
-- United States Geological Services Brown Treesnake Rapid Response Team, 2014
+- Mental Health First Aid USA, 2021<br>
+- California Qualified Applicator License, 2017<br>
+- United States Geological Services Brown Treesnake Rapid Response Team<br>
 
 ## Publications
 
@@ -100,40 +69,20 @@ library(tidyverse)
 
 ## Honors and Awards
 
-- National Science Foundation and Duke University Research Education for Undergraduates Internship
-award: Puerto Viejo de Sarapiqui, Costa Rica June 2006
+- National Science Foundation and Duke University Research Education for Undergraduates Internship award - 2006<br>
+- Benjamin Gilman International Scholarship - 2004
 
-- University of Hawaii School for Ocean Ecology, Science and Technology Tuition Waiver for Academic
-Excellence: Honolulu, HI Fall 2005
-
-- University of Hawaii Dean’s List: Honolulu, HI Spring 2004 – Spring 2005
-
-- Benjamin Gillman International Scholarship: Honolulu, HI August 2004
-
-	
 ## Professional Affiliations
 
-- Member, Board Member, Secretary, **President** | California Invasive Plant Council 2017 – Present
+- **Board Member, Secretary, President** | California Invasive Plant Council 2017 – 2021<br>
+- **Member** | California Native Plant Society 2016 – Present<br>
+- **Member** | Society for Ecological Restoration 2019 – 2021<br>
+- **Member** | San Diego County Weed Management Area 2018 – 2021<br> 
+- **Board Member** | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019<br>
+- **Board Member** | Southern California Botanical Society 2017 - 2018<br>
+- **Member** | Los Angeles County Weed Management Area 2015 - 2018<br>
 
-- **Member** | California Native Plant Society – Channel Islands, South Coast, San Diego Chapters 2016 – Present
 
-- **Member** | Society for Ecological Restoration 2019 – 2021 
-
-- **Member** | San Diego County Weed Management Area 2018 – 2021 
-
-- **Board Member** | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019
-
-- **Member** | Board Member, Southern California Botanical Society 2017 - 2018
-
-- **Member** | Los Angeles County Weed Management Area 2015 - 2018
-
-- **Member** | Coordinating Group on Alien Pest Species 2008, 2013
-
-- **Member** | Hawaii Invasive Species Council Working Groups 2008, 2013
-
-- **Member** | Oahu Coqui Frog Working Group 2013
-
-- **Volunteer** | Midway Atoll National Wildlife Refuge 2010, 2011, 2012
 
 
 

@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Julia Parish</title>
@@ -452,7 +453,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -1859,7 +1860,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2170,10 +2174,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   .distill-site-header {
     --title-size:       20px;
-    --text-color:       #f8dec4; 
+    --text-color:       #434543; 
     --text-size:        18px;
     --hover-color:      #fffdf0;
-    --bkgd-color:       #f8c4c4;
+    --bkgd-color:       #B2D5B2;
   }
 
   .distill-site-footer {
@@ -2349,7 +2353,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2381,9 +2385,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="index.html">About</a>
-<a href="CV.html">CV</a>
-<a href="post.html">Post</a>
+<a href="index.html">Biography</a>
+<a href="CV.html">Resume</a>
+<a href="post.html">Posts</a>
 <a href="https://github.com/juliaparish/juliaparish.github.io" aria-label="Link to source">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2406,51 +2410,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <h2 id="education"><strong>Education</strong></h2>
 <p><strong>Master of Environmental Data Science</strong> | Expected 2022 <br> Bren School of Environmental Science &amp; Management <br> University of California, Santa Barbara</p>
-<p><strong>Bachelor of Arts in Interdisciplinary Studies</strong>| May 2007 <br> Emphasis: Environmental Studies <br> University of Hawaii at Manoa</p>
+<p><strong>Bachelor of Arts in Interdisciplinary Studies</strong> | May 2007 <br> Emphasis: Environmental Studies <br> University of Hawaii at Manoa</p>
 <h2 id="professional-experience"><strong>Professional Experience</strong></h2>
-<p><strong>American Conservation Experience</strong> | San Diego, CA <br><em>Restoration Specialist</em> | April 2020 to July 2021</p>
-<ul>
-<li>Served as the project manager for two field crews controlling two invasive species, velvet tree (<em>Miconia calvescens</em>), and coqui frog (<em>Eleutherodactylus coqui</em>) on the island of Maui, Hawaii.</li>
-<li>Assisted with designing digital project databases and determining project measurables to collect field data using tablet devices.</li>
-</ul>
-<p><strong>American Conservation Experience</strong> | San Diego County, CA <br><em>Director</em> | June 2018 to March 2020</p>
-<ul>
-<li>Annually contracted $1.2m in conservation projects on federal, state, county, and private lands.</li>
-<li>Solicited, planned, scheduled, and tracked restoration and trail projects implemented by over 100 conservation corpsmembers.</li>
-</ul>
-<p><strong>Catalina Island Conservancy</strong> | Avalon, CA <br><em>Plant Conservation Manager</em> | April 2015 to June 2018</p>
-<ul>
-<li>Facilitated the recovery of chaparral and coastal sage scrub habitats by directing implementing an invasive plant management program.</li>
-<li>Updated and managed the invasive plant project ArcGIS and Access databases.</li>
-</ul>
-<p><strong>Oahu Invasive Species Committee</strong> | Honolulu, HI <br><em>Manager</em> | December 2012 to April 2015</p>
-<ul>
-<li>Performed strategic planning, fundraising, and public outreach functions surrounding the eradication of highly invasive plant species.</li>
-<li>Raised $1.2M funding in one year through competitive grant proposals.</li>
-</ul>
-<p><strong>Center for Conservation Research and Training at the University of Hawaii, Kure Atoll Wildlife Sanctuary</strong> | Honolulu, HI <br><em>CCRT Field Project Support Assistant</em> | August 2010 to December 2012</p>
-<ul>
-<li>Implemented the first two years of a 10-year restoration project to eradicate Golden crownbeard (<em>Verbesina encelioides</em>) using manual, mechanical, and chemical methodologies on a remote atoll in Papahanumokuakea Marine National Monument.</li>
-<li>Organized three seasonal remote field camps by recruiting two staff and eight volunteers, coordinating transit from Honolulu to Kure Atoll, and procuring supplies over a two-year period.</li>
-<li>Collected and analyzed data on the life history and ecology of seabirds, plants, mammals, and other wildlife species.</li>
-</ul>
-<p><strong>Center for Environmental Management of Military Lands</strong> | Hilo, HI <br><em>Incipient Weed Control Biologist | Research Assistant II</em> | November 2008 to July 2010</p>
-<ul>
-<li>Created the incipient invasive species detection program for the Department of Defense’s 53,823-hectare Pohakuloa Training Area (PTA) military base.</li>
-<li>Managed spatial data for the incipient invasive plant program in ArcGIS and a Microsoft Access database.</li>
-</ul>
-<p><strong>Oahu Invasive Species Committee</strong> | Honolulu, HI <br><em>Outreach Specialist</em> | December 2007 to November 2008</p>
-<ul>
-<li>Managed database of private property owners, outreach events, and volunteer lists in Microsoft Access.</li>
-<li>Answered public inquiries about invasive species and natural resource management with professionalism.</li>
-<li>Collaborated with outside agencies to prioritize State-wide outreach needs and goals.</li>
-</ul>
-<p><strong>Oahu Invasive Species Committee</strong> | Honolulu, HI <br><em>AmeriCorps Field Technician Member</em> | December 2006 - November 2007</p>
+<p><strong>American Conservation Experience</strong> | San Diego, CA <br>- <em>Restoration Specialist</em> | April 2020 to July 2021 <br>- <em>Director</em> | June 2018 to March 2020</p>
+<p><strong>Plant Conservation Manager</strong> | April 2015 to June 2018 <br><em>Catalina Island Conservancy</em> | Avalon, CA</p>
+<p><strong>Director</strong> | December 2012 to April 2015<br> <em>Oahu Invasive Species Committee</em> | Honolulu, HI</p>
+<p><strong>CCRT Field Project Support Assistant</strong> | August 2010 to December 2012<br> <em>Center for Conservation Research and Training at the University of Hawaii</em> | Honolulu, HI &amp; Kure Atoll Wildlife Sanctuary</p>
+<p><em>Center for Environmental Management of Military Lands</em> | Hilo, HI <br>- <strong>Botanist | Research Assistant I</strong> | November 2008 to June 2009 <br>- <strong>Incipient Weed Control Biologist | Research Assistant II</strong> | July 2009 to July 2010</p>
+<p><em>Oahu Invasive Species Committee</em> | Honolulu, HI <br>- <strong>Outreach Specialist</strong> | December 2007 to November 2008 <br>- <strong>Field Technician (AmeriCorps)</strong> | December 2006 - November 2007</p>
 <h2 id="certifications-and-licenses">Certifications and Licenses</h2>
 <ul>
-<li><p>Mental Health First Aid USA, 2021</p></li>
-<li><p>California Qualified Applicator License, 2017</p></li>
-<li><p>United States Geological Services Brown Treesnake Rapid Response Team, 2014</p></li>
+<li>Mental Health First Aid USA, 2021<br></li>
+<li>California Qualified Applicator License, 2017<br></li>
+<li>United States Geological Services Brown Treesnake Rapid Response Team<br></li>
 </ul>
 <h2 id="publications">Publications</h2>
 <ul>
@@ -2470,24 +2442,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <h2 id="honors-and-awards">Honors and Awards</h2>
 <ul>
-<li><p>National Science Foundation and Duke University Research Education for Undergraduates Internship award: Puerto Viejo de Sarapiqui, Costa Rica June 2006</p></li>
-<li><p>University of Hawaii School for Ocean Ecology, Science and Technology Tuition Waiver for Academic Excellence: Honolulu, HI Fall 2005</p></li>
-<li><p>University of Hawaii Dean’s List: Honolulu, HI Spring 2004 – Spring 2005</p></li>
-<li><p>Benjamin Gillman International Scholarship: Honolulu, HI August 2004</p></li>
+<li>National Science Foundation and Duke University Research Education for Undergraduates Internship award - 2006<br></li>
+<li>Benjamin Gilman International Scholarship - 2004</li>
 </ul>
 <h2 id="professional-affiliations">Professional Affiliations</h2>
 <ul>
-<li><p>Member, Board Member, Secretary, <strong>President</strong> | California Invasive Plant Council 2017 – Present</p></li>
-<li><p><strong>Member</strong> | California Native Plant Society – Channel Islands, South Coast, San Diego Chapters 2016 – Present</p></li>
-<li><p><strong>Member</strong> | Society for Ecological Restoration 2019 – 2021</p></li>
-<li><p><strong>Member</strong> | San Diego County Weed Management Area 2018 – 2021</p></li>
-<li><p><strong>Board Member</strong> | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019</p></li>
-<li><p><strong>Member</strong> | Board Member, Southern California Botanical Society 2017 - 2018</p></li>
-<li><p><strong>Member</strong> | Los Angeles County Weed Management Area 2015 - 2018</p></li>
-<li><p><strong>Member</strong> | Coordinating Group on Alien Pest Species 2008, 2013</p></li>
-<li><p><strong>Member</strong> | Hawaii Invasive Species Council Working Groups 2008, 2013</p></li>
-<li><p><strong>Member</strong> | Oahu Coqui Frog Working Group 2013</p></li>
-<li><p><strong>Volunteer</strong> | Midway Atoll National Wildlife Refuge 2010, 2011, 2012</p></li>
+<li><strong>Board Member, Secretary, President</strong> | California Invasive Plant Council 2017 – 2021<br></li>
+<li><strong>Member</strong> | California Native Plant Society 2016 – Present<br></li>
+<li><strong>Member</strong> | Society for Ecological Restoration 2019 – 2021<br></li>
+<li><strong>Member</strong> | San Diego County Weed Management Area 2018 – 2021<br></li>
+<li><strong>Board Member</strong> | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019<br></li>
+<li><strong>Board Member</strong> | Southern California Botanical Society 2017 - 2018<br></li>
+<li><strong>Member</strong> | Los Angeles County Weed Management Area 2015 - 2018<br></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
