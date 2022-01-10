@@ -47,19 +47,19 @@ library(sjPlot)
 
 <figcaption>
 
-This is an image of Holaniku, also know as Kure Atoll, the northernmost landmass in the Hawaiian archipelago. It is located at 28.3925° N, 178.2936° W and is within the Papahanaumokuakea National Marine Monument. *Image Credit: Kure Atoll Conservancy*
+This is an image of Holaniku, also know as Kure Atoll, the northernmost landmass in the Hawaiian archipelago. It is located at 28.3925° N, 178.2936° W and is within the Papahanaumokuakea National Marine Monument.<br>
+*Image Credit: Kure Atoll Conservancy*
 
 </figcaption>
 
 </figure>
 ## Introduction
 
-The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands that serve as nesting habitat for these seabirds are at high risk of inundation from tsunamis [@Reynolds:2017]. On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives and thousands of marine and terrestrial species were killed or maimed. 
+The Hawaiian archipelago is home to thousands of albatross. Albatross are an incredible bird species that have inspired authors, the fashion industry, and birders across the globe. They live to be over 65 years old, have the largest wingspan of any bird, are monogamous rearers, and have nest-site fidelity (meaning they return to the same nest location every year). Three species of albatross breed in Hawaii, the Laysan (*Phoebastria immutabilis*), Black-footed (*Phoebastria nigripes*), and Short-tailed (*Phoebastria albatrus*) albatross. Laysan albatross are listed as near threatened due to threats from climate change to their habitat and breeding grounds and long-line fishing operations [@Arata:2009]. The IUCN Red List of Threatened Species assessed the Black-footed albatross as near threatened in 2020 [@iucn:2020]. The Short-tailed albatross almost went extinct in the early 1900s due to feather hunting and is currently listed as an endangered species in the United States [@usfws:stal]. 
 
-Albatross live to be over 65 years old, have the largest wingspan of any bird, are monogamous rearers, and have nest-site fidelity (meaning they return to the same nest location every year). Three species of albatross breed in Hawaii, the Laysan (*Phoebastria immutabilis*), Black-footed (*Phoebastria nigripes*), and Short-tailed (*Phoebastria albatrus*) albatross. Laysan albatross are listed as near threatened due to threats from climate change to their habitat and breeding grounds and long-line fishing operations [@Arata:2009]. The Short-tailed albatross almost went extinct in the early 1900s due to feather hunters and is currently listed as an endangered species in the United States [@usfws:stal]. The UCN Red List of Threatened Species assessed the Black-footed albatross as near threatened in 2020 [@iucn:2020]. 
+The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, and are where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands are at extreme risk of inundation from tsunamis [@Reynolds:2017]. The elevation range  On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami killed or injured thousands of marine and terrestrial species throughout the Pacific region. A large portion of the wildlife impacted by the Tōhoku tsunami were in Papahanaumokuakea region of Hawaii. 
 
-Researchers estimated the Tōhoku tsunami that between 26% - 52% of all Black-footed albatross nests and more than 275,000 albatross nests flooded from inundation waters throughout the Northwestern Hawaiian Islands [@Reynolds:2017]. This post will attempt to analysis and quantify the impact of the Tōhoku tsunami on two Hawaiian albatross species, Laysan and Black-footed albatross. The Short-tailed albatross was not included in the analysis as there is only one breeding pair in Hawaii. 
-
+Researchers estimated the Tōhoku tsunami flooded between 26% - 52% of all Black-footed albatross nests and impacted more than 275,000 albatross nests throughout Papahanaumokuakea [@Reynolds:2017]. This post will attempt to analyze and quantify the impact of the Tōhoku tsunami on two Hawaiian albatross species, Laysan and Black-footed albatross. The Short-tailed albatross was not included in this analysis as there is only one breeding pair in Hawaii. 
 
 ## Analysis Plan
 
@@ -73,7 +73,7 @@ data.frame("Phase" = c(1:6),
                              "Conduct regression analysis",
                              "Interpret results",
                              "Conclusion")) %>% 
-  kable(caption = "Table 1: Analysis Plan Outline") %>%
+  kable(caption = "Analysis Plan Outline") %>%
   kable_paper(full_width = FALSE) %>%
   kable_styling(latex_options = "striped",
                 font_size = 15) %>% 
@@ -83,9 +83,21 @@ data.frame("Phase" = c(1:6),
 
 ## Collect Data
 
+After researching several data sources for albatross populations, I retrieved banding data for both Laysan and Black-footed albatross from the USGS Bird Banding Laboratory (BBL). The BBL has data on bird species for the past 100 years. The data contains information about an individual birds sex, age, health condition, and coordinates where the bird was banded. To access data from the BBL, it requires establishing an account on the [USGS Bird Banding Lab Bander Portal website](https://www.pwrc.usgs.gov/bbl/Bander_portal/login/main_login.php). Once you submit a data request, files will be available for download within 24 - 48 hours. 
 
+<figure>
 
-```{r band data, include = FALSE}
+<img src="./images/banding.jpg" alt="Two biologist band a juvenile Black-footed albatross." style="width:100%;"/>
+
+<figcaption>
+
+Author and a colleague banding a juvenile Black-footed albatross.<br> *Image Credit: E. Opie*
+
+</figcaption>
+
+</figure>
+
+```{r band data}
 # read in banding data
 albie_band <- read_csv(here("_posts", "2022-01-09-hawaii-albatross-tohoku-tsunami", "data", "laal_bfal_ca_hi_bbl2021.csv")) #both bfal and laal banding data for CA and HI
 ```
@@ -107,7 +119,7 @@ albie_band <- albie_band %>%
  
 ```
 
-```{r}
+```{r, include = FALSE}
 # convert database to sf element to create geom
 albie_sf <- st_as_sf(albie_band, 
                        coords = c("lon_dd","lat_dd"), 
@@ -117,8 +129,9 @@ albie_sf <- st_as_sf(albie_band,
 
 ## Visualize Data
 
+Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross. The only two main Hawaiin islands where albatross nest at Kauai and Oahu. Disappointingly, I was unable to obtain a basemap that displayed the entire Hawaii archipelago. Using the [geom_label_repel() function](https://www.rdocumentation.org/packages/ggrepel/versions/0.9.1/topics/geom_label_repel), I was able to place labels adjacent to all locations within Papahanaumokuakea. 
 
-```{r create HI map}
+```{r create HI map, include=FALSE}
 # bounding box for Hawaii
 hawaii <- c(-178, 18.5, -154, 28.9)
 
@@ -127,7 +140,7 @@ hawaii_map <- get_map(hawaii,
                       maptype = "satellite")
 ```
 
-```{r nwhi points}
+```{r nwhi points, include = FALSE}
 nwhi_points <- data.frame(lon = c(-161.9, -164.11, -166.05, -167.99, -170.65, -171.68, -174, -175, -176.5, -177),
                           lat = c(23.06, 22.84, 23.94, 24.99, 24.8, 25.81, 25.6, 26.2, 26.5, 28.8),
                           name = c("Nihoa", "Mokumanamana", "Lalo", "Onunui", "Kamokuokamohoalii", "Kamole", "Kapou", "Manawai", "Kuaihelani", "Holaniku"))
@@ -276,7 +289,7 @@ pop_params_table <- knitr::kable(pop_params_summary,
                                  digits = 0,
                                  col.names = c('Albatross Species', 'Population Mean', 'Population Median', 'Population Max'),
                                  align = "lccc",
-                                 caption = "Table 2: Hawaii Albatross Population Summary 1996 - 2021") %>%
+                                 caption = "Hawaii Albatross Population Summary 1996 - 2021") %>%
   kable_paper(full_width = FALSE) %>%
   kable_styling(latex_options = "striped",
                 font_size = 15) %>% 
@@ -323,7 +336,7 @@ pop_mean <- tibble(species = c("BFAL", "LAAL"),
 ```{r}
 pop_mean_table <- knitr::kable(pop_mean,
                                col.names = c('Species', 'Pre_Pop_Mean', 'Post_Pop_Mean'),
-                               caption = "Table 3: Hawaii Albatross Count Means Pre- & Post- Tōhoku Tsunami") %>% 
+                               caption = "Hawaii Albatross Count Means Pre- & Post- Tōhoku Tsunami") %>% 
   kable_classic(full_width = F, html_font = "Cambria") #%>% 
   # save_kable(file = "images/albie_mean_pops.png",
   #            zoom = 1.5)
