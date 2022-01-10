@@ -47,7 +47,7 @@ library(sjPlot)
 
 <figcaption>
 
-The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands that serve as nesting habitat for these seabirds are at high risk of inundation from tsunami events. *Image Credit: Kure Atoll Conservancy*
+The Hawaiian archipelago is home to thousands of albatross. The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands that serve as nesting habitat for these seabirds are at high risk of inundation from tsunami events [@Reynolds:2017]. *Image Credit: Kure Atoll Conservancy*
 
 </figcaption>
 
@@ -55,9 +55,11 @@ The Hawaiian archipelago is home to thousands of albatross. The Northwestern Haw
 ## Objective
 
 
+
+
 ## Analysis Plan
 
-This analysis will follow the specific steps outlined in Table 1 below:
+Analysis will take place in phases using the outline described in Table 1 below:
 
 ```{r}
 data.frame("Phase" = c(1:6),
@@ -109,7 +111,7 @@ albie_sf <- st_as_sf(albie_band,
 
 ```
 
-## Visulize Data
+## Visualize Data
 
 
 ```{r create HI map}
