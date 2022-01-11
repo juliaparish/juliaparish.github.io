@@ -35,7 +35,6 @@ library(janitor)
 library(grid)
 library(sf)
 library(ggmap)
-library(ggrepel)
 library(kableExtra)
 library(sjPlot)
 
@@ -129,7 +128,7 @@ albie_sf <- st_as_sf(albie_band,
 
 ## Visualize Data
 
-Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross. The only two main Hawaiin islands where albatross nest at Kauai and Oahu. Disappointingly, I was unable to obtain a basemap that displayed the entire Hawaii archipelago. Using the [geom_label_repel() function](https://www.rdocumentation.org/packages/ggrepel/versions/0.9.1/topics/geom_label_repel), I was able to place labels adjacent to all locations within Papahanaumokuakea. 
+Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross. The only two main Hawaiian islands where albatross nest are Kauai and Oahu.
 
 ```{r create HI map, include=FALSE}
 # bounding box for Hawaii
@@ -138,13 +137,6 @@ hawaii <- c(-178, 18.5, -154, 28.9)
 hawaii_map <- get_map(hawaii,
                       source = "google",
                       maptype = "satellite")
-```
-
-```{r nwhi points, include = FALSE}
-nwhi_points <- data.frame(lon = c(-161.9, -164.11, -166.05, -167.99, -170.65, -171.68, -174, -175, -176.5, -177),
-                          lat = c(23.06, 22.84, 23.94, 24.99, 24.8, 25.81, 25.6, 26.2, 26.5, 28.8),
-                          name = c("Nihoa", "Mokumanamana", "Lalo", "Onunui", "Kamokuokamohoalii", "Kamole", "Kapou", "Manawai", "Kuaihelani", "Holaniku"))
-
 ```
 
 ```{r create albatross map}
@@ -157,19 +149,56 @@ albie_map <- ggmap(hawaii_map) +
                      values = c("#9E7E8C", "#39ACB1"),
                      labels = c("Black-footed Albatross", "Laysan Albatross"),
                      guide = guide_legend(override.aes = list(size = 3, alpha = 1))) +
-  geom_label_repel(data = nwhi_points,
-                   aes(x = lon, y = lat, label = name),
-                   size = 2,
-                   vjust = 0.5,
-                   hjust = 0.9,
-                   alpha = 0.8) +
+  annotate("rect", xmin = -162.13, xmax = -161.78, ymin = 22.94, ymax = 23.22, 
+           color = "#728A72", fill = "white", alpha = 0.2) +
+  annotate('text', x = -161.7, y = 23.3, 
+           label = 'Nihoa', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -164.856, xmax = -164.55, ymin = 23.42, ymax = 23.74, 
+           color = "#728A72", fill = "white", alpha = 0.2) +
+  annotate('text', x = -164.45, y = 23.8, 
+           label = 'Mokumanamana', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -166.54, xmax = -165.88, ymin = 23.45, ymax = 24.11, 
+           color = "#728A72", fill = "white", alpha = 0.0) +
+  annotate('text', x = -166.54, y = 24.3, 
+           label = 'Lalo', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -168.19, xmax = -167.83, ymin = 24.82, ymax = 25.16, 
+           color = "#728A72", fill = "white", alpha = 0.2) +
+  annotate('text', x = -167.8, y = 25.3, 
+           label = 'Onunui', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -170.78, xmax = -170.46, ymin = 25.33, ymax = 25.68, 
+           color = "#728A72", fill = "white", alpha = 0.2) +
+  annotate('text', x = -170.39, y = 25.8, 
+           label = 'Kamokuokamohoalii', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -171.95, xmax = -171.45, ymin = 25.53, ymax = 26, 
+           color = "#728A72", fill = "white", alpha = 0.0) +
+  annotate('text', x = -172, y = 26.2, 
+           label = 'Kamole', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -174.21, xmax = -173.8, ymin = 25.84, ymax = 26.24, 
+           color = "#728A72", fill = "white", alpha = 0.2) +
+  annotate('text', x = -173.85, y = 26.5, 
+           label = 'Kapou', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -175.47, xmax = -174.9, ymin = 27.22, ymax = 27.61, 
+           color = "#728A72", fill = "white", alpha = 0.2) +
+  annotate('text', x = -174.8, y = 27.7, 
+           label = 'Kamole', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -176.16, xmax = -175.53, ymin = 27.57, ymax = 28.14, 
+           color = "#728A72", fill = "white", alpha = 0.0) +
+  annotate('text', x = -175.97, y = 28.35, 
+           label = 'Kuaihelani', color = 'black', size = 2.3, hjust = 0) +
+  annotate("rect", xmin = -177.19, xmax = -177.6, ymin = 28.1, ymax = 28.4, 
+           color = "#728A72", fill = "white", alpha = 0.0) +
+  annotate('text', x = -177.55, y = 28.65, 
+           label = 'Holaniku', color = 'black', size = 2.3, hjust = 0) +
+  annotate('text', x = -177.5, y = 19.5, 
+           label = 'Created: 2021 J. Parish\nData Source: USGS Bird Banding Lab', 
+           color = 'black', size = 1.5, hjust = 0) +
   labs(title = "Figure 1: Banded Albatross Species in the Hawaiian Archipelago",
         subtitle = "1996 - 2021",
         x = "Longitude",
         y = "Latitude") +
   theme(legend.title = element_text(size=12, color = "black", face="bold"),
            legend.justification=c(0,1), 
-           legend.position=c(0.74, 0.95),
+           legend.position=c(0.72, 0.98),
            legend.background = element_blank(),
            legend.key = element_blank())
 
