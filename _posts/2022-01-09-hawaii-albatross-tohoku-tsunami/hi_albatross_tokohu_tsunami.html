@@ -1516,6 +1516,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3>Contents</h3>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#research-question">Research Question</a></li>
 <li><a href="#analysis-plan">Analysis Plan</a></li>
 <li><a href="#collect-data">Collect Data</a></li>
 <li><a href="#visualize-data">Visualize Data</a></li>
@@ -1536,7 +1537,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 <h2 id="introduction">Introduction</h2>
 <p>The Hawaiian archipelago is home to thousands of albatross. Albatross are an incredible bird species that have inspired authors, the fashion industry, and birders across the globe. They live to be over 65 years old, have the largest wingspan of any bird, are monogamous rearers, and have nest-site fidelity (meaning they return to the same nest location every year). Three species of albatross breed in Hawaii, the Laysan (<em>Phoebastria immutabilis</em>), Black-footed (<em>Phoebastria nigripes</em>), and Short-tailed (<em>Phoebastria albatrus</em>) albatross. Laysan albatross are listed as near threatened due to threats from climate change to their habitat and breeding grounds and long-line fishing operations <span class="citation" data-cites="Arata:2009">(<a href="#ref-Arata:2009" role="doc-biblioref">Arata, Sievert, and Naughton 2009</a>)</span>. The IUCN Red List of Threatened Species assessed the Black-footed albatross as near threatened in 2020 <span class="citation" data-cites="iucn:2020">(<a href="#ref-iucn:2020" role="doc-biblioref">List 2017</a>)</span>. The Short-tailed albatross almost went extinct in the early 1900s due to feather hunting and is currently listed as an endangered species in the United States <span class="citation" data-cites="usfws:stal">(<a href="#ref-usfws:stal" role="doc-biblioref">Alaska Region, n.d.</a>)</span>.</p>
-<p>The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, and are where 95% of all Black-footed albatross and 99% of Laysan albatross nest <span class="citation" data-cites="Arata:2009">(<a href="#ref-Arata:2009" role="doc-biblioref">Arata, Sievert, and Naughton 2009</a>)</span>. These low lying islands are at extreme risk of inundation from tsunamis <span class="citation" data-cites="Reynolds:2017">(<a href="#ref-Reynolds:2017" role="doc-biblioref">Reynolds et al. 2017</a>)</span>. The elevation range On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami killed or injured thousands of marine and terrestrial species throughout the Pacific region. A large portion of the wildlife impacted by the Tōhoku tsunami were in Papahanaumokuakea region of Hawaii.</p>
+<p>The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, and are where 95% of all Black-footed albatross and 99% of Laysan albatross nest <span class="citation" data-cites="Arata:2009">(<a href="#ref-Arata:2009" role="doc-biblioref">Arata, Sievert, and Naughton 2009</a>)</span>. These low lying islands are at extreme risk of inundation from tsunamis <span class="citation" data-cites="Reynolds:2017">(<a href="#ref-Reynolds:2017" role="doc-biblioref">Reynolds et al. 2017</a>)</span>. The elevation range On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami killed or injured thousands of marine and terrestrial species throughout the Pacific region. A large portion of the wildlife impacted by the Tōhoku tsunami were in the Papahanaumokuakea region of Hawaii.</p>
+<h2 id="research-question">Research Question</h2>
 <p>Researchers estimated the Tōhoku tsunami flooded between 26% - 52% of all Black-footed albatross nests and impacted more than 275,000 albatross nests throughout Papahanaumokuakea <span class="citation" data-cites="Reynolds:2017">(<a href="#ref-Reynolds:2017" role="doc-biblioref">Reynolds et al. 2017</a>)</span>. This post will attempt to analyze and quantify the impact of the Tōhoku tsunami on two Hawaiian albatross species, Laysan and Black-footed albatross. The Short-tailed albatross was not included in this analysis as there is only one breeding pair in Hawaii.</p>
 <h2 id="analysis-plan">Analysis Plan</h2>
 <p>Analysis will take place in phases using the outline described in Table 1 below:</p>
@@ -1629,7 +1631,7 @@ Conclusion
 </table>
 </div>
 <h2 id="collect-data">Collect Data</h2>
-<p>After researching several data sources for albatross populations, I retrieved banding data for both Laysan and Black-footed albatross from the USGS Bird Banding Laboratory (BBL). The BBL has data on bird species for the past 100 years. The data contains information about an individual birds sex, age, health condition, and coordinates where the bird was banded. To access data from the BBL, it requires establishing an account on the <a href="https://www.pwrc.usgs.gov/bbl/Bander_portal/login/main_login.php">USGS Bird Banding Lab Bander Portal website</a>. Once you submit a data request, files will be available for download within 24 - 48 hours.</p>
+<p>After researching several data sources for albatross populations, I retrieved banding data for both Laysan and Black-footed albatross from the USGS Bird Banding Laboratory (BBL). The BBL has data on bird species for the past 100 years. The data contains information about an individual birds sex, age, health condition, and coordinates where the bird was banded. To access data from the BBL, it requires establishing an account on the <a href="https://www.pwrc.usgs.gov/bbl/Bander_portal/login/main_login.php">USGS Bird Banding Lab Bander Portal website</a>. Once you submit a data request, files will be available for download within 24 - 48 hours. I requested data for black-footed and Laysan albatross in Hawaii between the years 1996 and 2020.</p>
 <figure>
 <p><img src="images/banding.JPG" alt="Two biologist band a juvenile Black-footed albatross." style="width:100%;"/></p>
 <figcaption>
@@ -1649,7 +1651,7 @@ Show code
 </details>
 </div>
 <h2 id="visualize-data">Visualize Data</h2>
-<p>Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the <a href="https://cran.r-project.org/web/packages/ggmap/readme/README.html">ggmap() package</a>. The banding data point distribution accurately reflects the known species distribution of both species of albatross. The only two main Hawaiian islands where albatross nest are Kauai and Oahu.</p>
+<p>Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the <a href="https://cran.r-project.org/web/packages/ggmap/readme/README.html">ggmap() package</a>. The banding data point distribution accurately reflects the known species distribution of both species of albatross in Hawaii. The only two main Hawaiian islands where albatross nest are Kauai and Oahu.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -1709,7 +1711,7 @@ Show code
            label <span class='op'>=</span> <span class='st'>'Created: 2021 J. Parish\nData Source: USGS Bird Banding Lab'</span>, 
            color <span class='op'>=</span> <span class='st'>'black'</span>, size <span class='op'>=</span> <span class='fl'>1.5</span>, hjust <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 1: Banded Albatross Species in the Hawaiian Archipelago"</span>,
-        subtitle <span class='op'>=</span> <span class='st'>"1996 - 2021"</span>,
+        subtitle <span class='op'>=</span> <span class='st'>"1996 - 2020"</span>,
         x <span class='op'>=</span> <span class='st'>"Longitude"</span>,
         y <span class='op'>=</span> <span class='st'>"Latitude"</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>legend.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size<span class='op'>=</span><span class='fl'>12</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, face<span class='op'>=</span><span class='st'>"bold"</span><span class='op'>)</span>,
@@ -1717,7 +1719,6 @@ Show code
            legend.position<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.72</span>, <span class='fl'>0.98</span><span class='op'>)</span>,
            legend.background <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
            legend.key <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-
 <span class='va'>albie_map</span>
 </code></pre>
 </div>
@@ -1737,6 +1738,7 @@ Show code
 </div>
 </details>
 </div>
+<p>To conduct analysis on the albatross banding data, it is necessary to create a total count of albatross banded for each year from 1996 to 2020. Once a total count was summed, I used a line and point plot to visualize albatross count annually.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>

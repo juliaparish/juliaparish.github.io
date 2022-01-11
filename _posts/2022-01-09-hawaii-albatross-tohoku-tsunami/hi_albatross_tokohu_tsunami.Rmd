@@ -56,9 +56,13 @@ This is an image of Holaniku, also know as Kure Atoll, the northernmost landmass
 
 The Hawaiian archipelago is home to thousands of albatross. Albatross are an incredible bird species that have inspired authors, the fashion industry, and birders across the globe. They live to be over 65 years old, have the largest wingspan of any bird, are monogamous rearers, and have nest-site fidelity (meaning they return to the same nest location every year). Three species of albatross breed in Hawaii, the Laysan (*Phoebastria immutabilis*), Black-footed (*Phoebastria nigripes*), and Short-tailed (*Phoebastria albatrus*) albatross. Laysan albatross are listed as near threatened due to threats from climate change to their habitat and breeding grounds and long-line fishing operations [@Arata:2009]. The IUCN Red List of Threatened Species assessed the Black-footed albatross as near threatened in 2020 [@iucn:2020]. The Short-tailed albatross almost went extinct in the early 1900s due to feather hunting and is currently listed as an endangered species in the United States [@usfws:stal]. 
 
-The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, and are where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands are at extreme risk of inundation from tsunamis [@Reynolds:2017]. The elevation range  On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami killed or injured thousands of marine and terrestrial species throughout the Pacific region. A large portion of the wildlife impacted by the Tōhoku tsunami were in Papahanaumokuakea region of Hawaii. 
+The Northwestern Hawaiian islands, Papahanaumokuakea, are comprised of atolls, reefs, and pinnacles, and are where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low lying islands are at extreme risk of inundation from tsunamis [@Reynolds:2017]. The elevation range  On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific Ocean. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami killed or injured thousands of marine and terrestrial species throughout the Pacific region. A large portion of the wildlife impacted by the Tōhoku tsunami were in the Papahanaumokuakea region of Hawaii. 
+
+## Research Question
 
 Researchers estimated the Tōhoku tsunami flooded between 26% - 52% of all Black-footed albatross nests and impacted more than 275,000 albatross nests throughout Papahanaumokuakea [@Reynolds:2017]. This post will attempt to analyze and quantify the impact of the Tōhoku tsunami on two Hawaiian albatross species, Laysan and Black-footed albatross. The Short-tailed albatross was not included in this analysis as there is only one breeding pair in Hawaii. 
+
+
 
 ## Analysis Plan
 
@@ -80,9 +84,12 @@ data.frame("Phase" = c(1:6),
   row_spec(0, bold = T, color = "black")
 ```
 
+
+
+
 ## Collect Data
 
-After researching several data sources for albatross populations, I retrieved banding data for both Laysan and Black-footed albatross from the USGS Bird Banding Laboratory (BBL). The BBL has data on bird species for the past 100 years. The data contains information about an individual birds sex, age, health condition, and coordinates where the bird was banded. To access data from the BBL, it requires establishing an account on the [USGS Bird Banding Lab Bander Portal website](https://www.pwrc.usgs.gov/bbl/Bander_portal/login/main_login.php). Once you submit a data request, files will be available for download within 24 - 48 hours. 
+After researching several data sources for albatross populations, I retrieved banding data for both Laysan and Black-footed albatross from the USGS Bird Banding Laboratory (BBL). The BBL has data on bird species for the past 100 years. The data contains information about an individual birds sex, age, health condition, and coordinates where the bird was banded. To access data from the BBL, it requires establishing an account on the [USGS Bird Banding Lab Bander Portal website](https://www.pwrc.usgs.gov/bbl/Bander_portal/login/main_login.php). Once you submit a data request, files will be available for download within 24 - 48 hours. I requested data for black-footed and Laysan albatross in Hawaii between the years 1996 and 2020. 
 
 <figure>
 
@@ -128,7 +135,7 @@ albie_sf <- st_as_sf(albie_band,
 
 ## Visualize Data
 
-Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross. The only two main Hawaiian islands where albatross nest are Kauai and Oahu.
+Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. The initial visualization was to map the data using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross in Hawaii. The only two main Hawaiian islands where albatross nest are Kauai and Oahu.
 
 ```{r create HI map, include=FALSE}
 # bounding box for Hawaii
@@ -193,7 +200,7 @@ albie_map <- ggmap(hawaii_map) +
            label = 'Created: 2021 J. Parish\nData Source: USGS Bird Banding Lab', 
            color = 'black', size = 1.5, hjust = 0) +
   labs(title = "Figure 1: Banded Albatross Species in the Hawaiian Archipelago",
-        subtitle = "1996 - 2021",
+        subtitle = "1996 - 2020",
         x = "Longitude",
         y = "Latitude") +
   theme(legend.title = element_text(size=12, color = "black", face="bold"),
@@ -201,13 +208,11 @@ albie_map <- ggmap(hawaii_map) +
            legend.position=c(0.72, 0.98),
            legend.background = element_blank(),
            legend.key = element_blank())
-
 albie_map
- 
 ```
 
 ```{r, include = FALSE}
-ggsave(here("_posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/fig1_albatross_map.png"), plot = albie_map)
+# ggsave(here("_posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/fig1_albatross_map.png"), plot = albie_map)
 ```
 
 ```{r}
@@ -217,6 +222,8 @@ band_count <- albie_band %>%
   summarise(total = sum(count))
 
 ```
+
+To conduct analysis on the albatross banding data, it is necessary to create a total count of albatross banded for each year from 1996 to 2020. Once a total count was summed, I used a line and point plot to visualize albatross count annually.
 
 ```{r plot count by species, warning=FALSE}
 #plot banding count data
