@@ -2,12 +2,12 @@
 title: "Julia Parish"
 image: "images/Santa_Cruz_JAP.jpg"
 links:
+  - label: GitHub
+    url: "https://github.com/juliaparish"
   - label: LinkedIn
     url: "https://www.linkedin.com/in/julia-a-parish/"
   - label: Twitter
     url: "https://twitter.com/Jujuba719"
-  - label: GitHub
-    url: "https://github.com/juliaparish"
   - label: iNaturalist
     url: "https://www.inaturalist.org/people/jujuba"
 output:

@@ -5,7 +5,6 @@ description: |
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
 
 ```
 
@@ -18,59 +17,60 @@ library(tidyverse)
 <br>&nbsp;Emphasis: Environmental Studies
 <br>&nbsp;University of Hawaii at Manoa
 
-## **Professional Experience**
+## **Master's Capstone Project**
+**Snow Today**, 01/2022 to Present<br>
+**Role:** Communications Manager | **Client:** UCSB Earth Research Institute and UC Boulder Institute of Artic & Alpine Research<br> 
+- Develop an interactive data visualization web application for global snow remotely sensed data using R, Python, and JavaScript. 
+
+## **Experience**
 
 **American Conservation Experience** | San Diego, CA
-<br>- *Restoration Specialist* | April 2020 to July 2021
-<br>- *Director* | June 2018 to March 2020
+<br>- *Restoration Specialist* | 04/2020 to 07/2021
+<br>- *Director* | 06/2018 to 04/2020
 
-**Plant Conservation Manager** | April 2015 to June 2018
-<br>*Catalina Island Conservancy* | Avalon, CA
+**Catalina Island Conservancy** | 04/2015 to 07/2018
+<br>*Plant Conservation Manager* | Avalon, CA
 
-**Director** | December 2012 to April 2015<br>
-*Oahu Invasive Species Committee* | Honolulu, HI
+**Oahu Invasive Species Committee** | 12/2012 to 04/2015<br>
+*Director* | Honolulu, HI
 
-**CCRT Field Project Support Assistant** | August 2010 to December 2012<br>
-*Center for Conservation Research and Training at the University of Hawaii* | Honolulu, HI & Kure Atoll Wildlife Sanctuary 
+**Center for Conservation Research and Training at the University of Hawaii** | 07/2010 to 12/2012<br>
+*CCRT Field Project Support Assistant* | Honolulu, HI
 
 *Center for Environmental Management of Military Lands* | Hilo, HI
-<br>- **Botanist | Research Assistant I** | November 2008 to June 2009
-<br>- **Incipient Weed Control Biologist | Research Assistant II** | July 2009 to July 2010
+<br>- **Botanist | Research Assistant I** | 11/2008 to 06/2009
+<br>- **Incipient Weed Control Biologist | Research Assistant II** | 07/2009 to 07/2010
 
 *Oahu Invasive Species Committee* | Honolulu, HI
-<br>- **Outreach Specialist** | December 2007 to November 2008
-<br>- **Field Technician (AmeriCorps)** | December 2006 - November 2007
+<br>- **Outreach Specialist** | 12/2007 to 11/2008
+<br>- **Field Technician (AmeriCorps)** | 12/2006 - 11/2007
 
-## Certifications and Licenses
+## Certifications &  Licenses
 
 - Mental Health First Aid USA, 2021<br>
 - California Qualified Applicator License, 2017<br>
-- United States Geological Services Brown Treesnake Rapid Response Team<br>
+- United States Geological Services Brown Treesnake Rapid Response Team, 2014<br>
 
 ## Publications
 
--	Duffy, D., Elliott, D., Hart, G.M., Gunderson, K., Aguon-Kona, J., Bartlett, R., Fujikawa, J., Gmelin, P., Javier, C., Kaneholani, I., Keanini, T., Kona, J., **Parish, J.**, Penniman, J.F., and Works, A.,2015, “Has the Small Indian Mongoose Become Established on Kauai Island, Hawaii?” Pacific Science, Vol. 69, Issue 4
+- Duffy, D., Parish, J., et al. (2015). Has the Small Indian Mongoose Become Established on Kauai
+Island, Hawaii? *Pacific Science*, 69(4), 559-565. https://doi.org/10.2984/69.4.9
 
 ## Articles
 
--	Mazurkiewicz, D., Adams, J., Ball, M., Carle, R., Dixon P., Flagg, K., Havstad, E., Howe, E., Hoyer, B., Knapp, J., McEachern, K., Luna-Mendoza, L., Munson, B., Niessen, K., Owen, K., **Parish, J.**, Power, P., Yamagiwa, A., 2017, “Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era,” Fremontia/California Native Plant Society, Vol. 45/No. 3
+- Mazurkiewicz, D., Parish, J., et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. *Fremontia*, 45(3), 26. 
 
--	**Parish, J.** 2010. “Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA.” Ecosystems Management Program Bulletin 48:4-6.
+-	**Parish, J.** (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. *Ecosystems Management Program Bulletin* 48, 4-6.
 
 ## Presentations & Posters
 
--	**Parish, J.** "Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses," Poster, Island Invasives Symposium. Dundee, Scotland. July 2017
+-	**Parish, J.** "Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses," Poster, *Island Invasives Symposium*. Dundee, Scotland. 2017.
 
--	**Parish, J.** “Prioritizing *Miconia calvescens* Survey on Oahu,” Presentation, California Invasive Plant Council Symposium, San Diego, CA. October 2015
+-	**Parish, J.** “Prioritizing *Miconia calvescens* Survey on Oahu,” Presentation, *California Invasive Plant Council Symposium*, San Diego, CA. 2015.
 
--	**Parish, J.** “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI.” Poster. Hawaii Conservation Conference. Honolulu, HI August 2010
+-	**Parish, J.** “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI.” Poster. *Hawaii Conservation Conference*. Honolulu, HI. 2010.
 
--	**Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of *Paraponera clavata* to chemical compounds in ethnobotanically important plant species.” NSF REU Internship Summer Research Presentation La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. August 2006
-
-## Honors and Awards
-
-- National Science Foundation and Duke University Research Education for Undergraduates Internship award - 2006<br>
-- Benjamin Gilman International Scholarship - 2004
+-	**Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of *Paraponera clavata* to chemical compounds in plants.” *NSF REU Internship Summer Research Presentation.* La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. 2006.
 
 ## Professional Affiliations
 
