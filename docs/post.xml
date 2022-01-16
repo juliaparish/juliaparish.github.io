@@ -19,5 +19,16 @@
       <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
       <media:content url="juliaparish.github.io/posts/2022-01-09-hawaii-albatross-tohoku-tsunami/images/laal.JPG" medium="image" type="image/jpeg"/>
     </item>
+    <item>
+      <title>Mapping Habitat Suitability of Sophora gypsohila</title>
+      <dc:creator>Julia Parish, Wylie Hampson, Shale Hunter, Alex Vand</dc:creator>
+      <link>juliaparish.github.io/posts/2021-12-01-mapping-habitat-remote-sensing</link>
+      <description>Mapping habitat suitability for the identification and conservation of the Guadalupe Mountain necklacepod (Sophora gypsophila) using Landsat 8 data</description>
+      <category>R</category>
+      <category>Remote Sensing</category>
+      <guid>juliaparish.github.io/posts/2021-12-01-mapping-habitat-remote-sensing</guid>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="juliaparish.github.io/posts/2021-12-01-mapping-habitat-remote-sensing/images/sophora.jpeg" medium="image" type="image/jpeg"/>
+    </item>
   </channel>
 </rss>
