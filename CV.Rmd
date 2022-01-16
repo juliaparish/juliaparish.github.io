@@ -2,6 +2,17 @@
 title: "Julia Parish"
 description: |
  Experienced Program Director with a passion for data science, spatial analysis, and conservation.
+author:
+  - first_name: "Julia"
+    last_name: "Parish"
+    url: https://github.com/juliaparish
+    orchid_id: 0000-0002-8323-6574
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    toc: true # add a table of contents
+    toc_float: true #float it (positioned on the left)
 ---
 
 ```{r setup, include=FALSE}
