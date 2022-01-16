@@ -1,6 +1,7 @@
 ---
 title: "Julia Parish"
 description: |
+ Experienced Program Director with a passion for data science, spatial analysis, and conservation.
 ---
 
 ```{r setup, include=FALSE}
