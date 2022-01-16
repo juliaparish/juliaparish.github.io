@@ -37,13 +37,13 @@ knitr::opts_chunk$set(echo = TRUE)
 **Center for Conservation Research and Training at the University of Hawaii** | 07/2010 to 12/2012<br>
 *CCRT Field Project Support Assistant* | Honolulu, HI
 
-*Center for Environmental Management of Military Lands* | Hilo, HI
-<br>- **Botanist | Research Assistant I** | 11/2008 to 06/2009
-<br>- **Incipient Weed Control Biologist | Research Assistant II** | 07/2009 to 07/2010
+**Center for Environmental Management of Military Lands** | Hilo, HI
+<br>- *Botanist (Research Assistant I)* | 11/2008 to 06/2009
+<br>- *Incipient Weed Control Biologist (Research Assistant II)* | 07/2009 to 07/2010
 
-*Oahu Invasive Species Committee* | Honolulu, HI
-<br>- **Outreach Specialist** | 12/2007 to 11/2008
-<br>- **Field Technician (AmeriCorps)** | 12/2006 - 11/2007
+**Oahu Invasive Species Committee** | Honolulu, HI
+<br>- *Outreach Specialist* | 12/2007 to 11/2008
+<br>- *Field Technician (AmeriCorps)* | 12/2006 - 11/2007
 
 ## Certifications &  Licenses
 
