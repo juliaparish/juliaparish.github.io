@@ -102,8 +102,8 @@ _**Note**: The Short-tailed albatross was not included in this analysis as there
 
 This statistical analysis will be testing the hypothesis if the Tōhoku tsunami impacted albatross populations in Hawaii. The table below outlines the phases of the analysis. 
 
-$$H_{0}: There\ has\ no\ impact\ of\ the\ Tōhoku\ tsunami\ on\ albatross\ populations\ in\ Hawaii.$$
-$$H_{1}: There\ has\ an\ impact\ of\ the\ Tōhoku\ tsunami\ on\ albatross\ populations\ in\ Hawaii.$$
+$$H_{0}: There\ was\ no\ impact\ of\ the\ Tōhoku\ tsunami\ on\ albatross\ populations\ in\ Hawaii.$$
+$$H_{1}: There\ was\ an\ impact\ of\ the\ Tōhoku\ tsunami\ on\ albatross\ populations\ in\ Hawaii.$$
 
 ```{r}
 data.frame("Phase" = c(1:5),
