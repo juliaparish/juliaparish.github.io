@@ -20,14 +20,13 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>&nbsp;Bren School of Environmental Science & Management
 <br>&nbsp;University of California, Santa Barbara
 
-**Bachelor of Arts in Interdisciplinary Studies** | May 2007
-<br>&nbsp;Emphasis: Environmental Studies
+**Bachelor of Arts in Interdisciplinary Studies: Environmental Studies** | May 2007
 <br>&nbsp;University of Hawaii at Manoa
 
 ## **Master's Capstone Project**
 **Snow Today**, 01/2022 to Present<br>
 **Role:** Communications Manager | **Client:** UCSB Earth Research Institute and UC Boulder Institute of Artic & Alpine Research<br> 
-- Develop an interactive data visualization web application for global snow remotely sensed data using R, Python, and JavaScript. 
+**Deliverable:** Develop an interactive web application to visualize and access remote sensed snow data. 
 
 ## **Experience**
 
