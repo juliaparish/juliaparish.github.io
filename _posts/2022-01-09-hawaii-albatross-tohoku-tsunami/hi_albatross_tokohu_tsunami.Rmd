@@ -1,5 +1,5 @@
 ---
-title: "The Impact of the 2011 Tōhoku tsunami on albatross in Hawaii"
+title: "The Impact of the 2011 Tōhoku tsunami on Albatross in Hawaii"
 description: |
   A statisical analysis of the impact of the 2011 Tōhoku tsunami on albatross populations in Hawaii.
 author:
@@ -56,7 +56,6 @@ This is an image of Hōlanikū, also know as Kure Atoll, the northernmost landma
 </figure>
 
 This statistical analysis was completed as an assignment for my Master's program course, Environmental Data Science 222: Statistics for Environmental Data Science.
-
 
 ## Research Question
 

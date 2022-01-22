@@ -25,28 +25,62 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(metajam)
-library(here)
 library(tidyverse)
+library(here)
 library(lubridate)
+library(httr2)
+library(purrr)
 library(janitor)
-library(vegan)
+library(XML)
 library(zoo)
+library(vegan)
 ```
 
 # EDS 213 Metadata Group Project
+
+## Environmental Question:
+What is the effect of sea surface temperature on coral bleaching?
+
 Our group discovered the Scott Reef and Rowley Shoals Coral Bleaching Data dataset while searching the DataOne repository for “coral bleaching.” This particular dataset focuses on long-term monitoring data from 1994 to 2017 at reef slope habitats off the coast of northwestern Australia. The metadata includes the reef system, date range, taxonomy, habitat type, coral coverage, and dataset methods. 
 
-```{r error =TRUE}
+## Data
+Search terms: coral bleaching, El Nino effect data, sea surface temperature data, species diversity
+
+## Data Sources:\
+
+**1.** James P Gilmour, Kylie L Cook, and Nicole M Ryan. 2021. Scott Reef and Rowley Shoals Coral Bleaching Data. Environmental Data Initiative.<br>
+[LTER Data Access](https://pasta.lternet.edu/package/metadata/eml/edi/952/1.)<br>
+- **Download Method:** metajam data_downloade API
+- **Spatial Coverage**: Scott Reef and Rowley Reef Ecosystems in - Northwestern Australia
+- **Temporal Coverage**: 1994 to 2020
+- **Parameters of Interest for Analysis:** Species Population
+
+**2.** NOAA/ National Weather Service National Centers for Environmental Prediction Climate Prediction Center Oceanic Niño Index (ONI).<br> [NOAA ENSO Data](https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/detrend.nino34.ascii.txt)
+- **Download Method:** read.table from base R
+- **Spatial Coverage**: 5N to 5S, 170W to 120W
+- **Temporal Coverage**: 1950 to 2021
+- **Parameters of Interest for Analysis:** SST Anomaly 
+
+## Data Management Plan
+
+### Data Management and Analysis Workflow
+Coral data will be downloaded for the local coral reef ecosystems (currently limited to Rowley Shoals (RS) and Scott Reef (SR) systems in Northwest Australia). Data on the monthly input to Ocean Nino Index will be used to compute the 3 month mean of the temperature anomaly. Both datasets will be combined to align the time periods. Then a Simpson’s Diversity Index (SDI) will be computed using the functions available in the vegan R package to draw the potential relationships between the temperature anomaly and coral species diversity. The data will be preserved until the SDI methodology has been superseded by more significant research. Our group will be using a KNB project repository to preserve our data due to their reputation, reliability and commitment to the future in case of company changes. 
+
+### Potential Legal Implications
+Currently, there are no legal constraints associated with acquiring, using and sharing the project data that we are aware of.
+
+```{r, error = TRUE, message=FALSE, warning=FALSE}
 # assign data url to access coral data from DataOne then download
 data_url <- "https://cn.dataone.org/cn/v2/resolve/https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fdata%2Feml%2Fedi%2F952%2F1%2Ff6212784c45d0a077f2c863868d22c4b"
-# If data is akready up to date, this will throw an error
+
+# If data is already up to date, this will throw an error
 # error=T in header will move past this issue
 download_d1_data(data_url, dir_name = "coral_data", path = ".")
 ```
 
 ```{r}
 # assign data path
-data_path <- here::here("coral_data")
+data_path <- system.file("coral_data", package = "metajam")
 ```
 
 ```{r}
@@ -143,26 +177,8 @@ ggplot2::ggplot() +
   ggplot2::theme_minimal()
 ```
 
-## Data Sources and Download
+## Link to KNB Repository:
 
-**1.** James P Gilmour, Kylie L Cook, and Nicole M Ryan. 2021. Scott Reef and Rowley Shoals Coral Bleaching Data. Environmental Data Initiative.<br>
-[LTER Data Access](https://pasta.lternet.edu/package/metadata/eml/edi/952/1.)<br>
-- **Download Method:** metajam data_downloade API
-- **Spatial Coverage**: Scott Reef and Rowley Reef Ecosystems in - Northwestern Australia
-- **Temporal Coverage**: 1994 to 2020
-- **Parameters of Interest for Analysis:** Species Pop
+Our group used a KNB project repository to preserve our data due to their reputation, reliability, and commitment to the future in case of company changes. Data will be preserved until the Simpson’s Diversity Index methodology has been superseded by more significant research. 
 
-**2.** NOAA/ National Weather Service National Centers for Environmental Prediction Climate Prediction Center Oceanic Niño Index (ONI).<br> [NOAA ENSO Data](https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/detrend.nino34.ascii.txt)
-- **Download Method:** read.table from base R
-- **Spatial Coverage**: 5N to 5S, 170W to 120W
-- **Temporal Coverage**: 1950 to 2021
-- **Parameters of Interest for Analysis:** SST Anomaly 
-
-
-Our group used a KNB project repository to preserve our data due to their reputation, reliability, and commitment to the future in case of company changes.
-Data will be preserved until the Simpson’s Diversity Index methodology has been superseded by more significant research. 
-
-**Link to KNB Repository:**
 [KNB Ecoinformatic site](https://knb.ecoinformatics.org/)
-
-
