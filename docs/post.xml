@@ -42,6 +42,16 @@
       <media:content url="juliaparish.github.io/posts/2021-10-03-life-expectancy/lifeexpectancy_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
+      <title>What is the effect of sea surface temperature on coral bleaching?</title>
+      <dc:creator>Julia Parish, Cullen Molitor, Ryan Munnikhuis, and Desik Somasundaram</dc:creator>
+      <link>juliaparish.github.io/posts/2021-11-13-seasurface-temp-corals</link>
+      <description>A synthesis project merging different datasets to gain new insights sea surface temperature on coral bleaching.</description>
+      <category>R</category>
+      <guid>juliaparish.github.io/posts/2021-11-13-seasurface-temp-corals</guid>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="juliaparish.github.io/posts/2021-11-13-seasurface-temp-corals/images/rowleycredit-scott-portelli.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Effects of Winter Storm Uri</title>
       <dc:creator>Grace Kumaishi, Julia Parish</dc:creator>
       <link>juliaparish.github.io/posts/2021-10-25-winterstormuri</link>
@@ -50,6 +60,7 @@
       <category>GIS</category>
       <guid>juliaparish.github.io/posts/2021-10-25-winterstormuri</guid>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="juliaparish.github.io/posts/2021-10-25-winterstormuri/images/comparison_map.png" medium="image" type="image/png" width="2582" height="2100"/>
     </item>
   </channel>
 </rss>
