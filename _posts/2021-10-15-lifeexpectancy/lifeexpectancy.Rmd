@@ -1,0 +1,129 @@
+---
+title: "Cartography Assignment"
+description: |
+  Maps for life expectacy in Africa and South America
+author:
+  - name: Grace Kumaishi, Julia Parish
+    url: https://github.com/juliaparish
+    orchid_id: 0000-0002-8323-6574
+date: 2021-10-15
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    toc: true # add a table of contents
+    toc_float: true #float it (positioned on the left)
+categories:
+  - R
+  - GIS
+preview: images/combined_lifeexp.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
+
+```{r, include = FALSE}
+# Install required packages
+library(sf)
+library(spData)
+library(RColorBrewer)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(tidyverse)
+library(tmap)    # for static and interactive maps
+library(ggplot2) # tidyverse data visualization package
+library(rgeos)
+```
+
+This cartography project was completed as an assignment for my Master's program course, Environmental Data Science 233: Spatial Analysis. It was collaboration with G. Kumaishi. 
+
+## Project Goal
+
+Create a map of life expectancy for South America and Africa.
+
+### Step One
+Create two separate maps for life expectancy data of South America and Africa using `spData` and `tmap`.
+
+##### *Life Expectancy in Africa:*
+
+```{r fig.cap="Life Expectancy in Africa", fig.alt = "Map of life expectancy for African countries. Life expectancy is visualized with five-year increments." , fig.align = "center"}
+### Africa ###
+
+world_africa <- world[world[["continent"]] == "Africa", ] # create a subset of the world dataset of just the African continent
+
+lifeexp_africa <- tm_shape(world_africa) + # store map in order to combine
+  tm_polygons(col = "lifeExp", # select life expectancy data
+            palette = "YlOrBr", # Yellow Orange Brown color palette from RColorBrewer
+            style = "pretty", # familiar GIS discrete options available such as quantile, equal, jenks, etc.
+            title = "Life Expectancy (years)*", # legend title lives within tm_polygons
+            textNA = "No Data") +   # converted "Missing" legend default to "No Data"
+  tm_layout(inner.margins = c(0.1, 0.1, 0.1, 0.1), # margins between 0-1 (bottom, left, top, right)
+            legend.title.size = 1,
+            legend.text.size = .8,
+            bg.color = "lightblue", # background color
+            title = "Africa") + # map title lives under tm_layouts
+  tm_compass(type = "4star", # other compass styles available
+            show.labels = 1, # specifies compass label options
+            size = 3,
+            position = c("right", "top")) +
+  tm_credits("Life expectancy data for the\nAfrican continent uses 5-year\nclassification breaks.\nSource: SpData \n \n*Note that the color scale differs\nbetween continents.", # credit data source including github link; \n creates text break
+            size = .5, # can't figure out how to make size bigger...
+            position = c("right", "bottom"), 
+            align = "right", # only applicable if using multiple lines
+            width = NA) # 1 is the whole map width, NA is determined by width of text
+
+lifeexp_africa
+```
+
+##### *Life Expectancy in South America:*
+
+```{r fig.cap="Life Expectancy in South America", fig.alt = "Map of life expectancy for South American countries. Life expectancy is visualized with two-year increments.", fig.align = "center"}
+### South America ###
+
+world_sa <- world[world[["continent"]] == "South America", ] # create a subset of the world dataset of just the South American continent
+
+lifeexp_sa <- tm_shape(world_sa) + # store map in order to combine
+  tm_polygons(col = "lifeExp", # select life expectancy data
+            palette = "YlOrBr", # Yellow Orange Brown color palette from RColorBrewer
+            n = 5, # specify number of breaks
+            style = "pretty", # familiar GIS discrete options available such as quantile, equal, jenks, etc.
+            title = "Life Expectancy (years)*", # legend title lives within tm_polygons
+            textNA = "No Data") + # converted "Missing" legend default to "No Data"
+  tm_layout(inner.margins = c(0.1, 0.25, 0.1, 0.25), # margins between 0-1 (bottom, left, top, right)
+            legend.position = c("right", "bottom"), 
+            legend.title.size = 1,
+            legend.text.size = .8,
+            bg.color = "lightblue", # background color
+            title = "South America") + # map title lives under tm_layouts
+  tm_compass(type = "4star", # other compass styles available
+             show.labels = 1, # specifies compass label options
+             size = 3,
+             position = c("right", "top")) +
+  tm_credits("Life expectancy data\nfor the South American continent uses\n2-year classification breaks.\nSource: SpData \n \n*Note that the color scale differs\nbetween continents.", # credit data source including github link; \n creates text break
+             position = c("left", "bottom"), 
+             align = "left",
+             size = .5) + 
+  tm_credits("", # explain varying color scales b/w two continents; \n creates text break
+             position = c("right", "bottom"), 
+             align = "right",
+             size = .3)
+  
+lifeexp_sa
+```
+
+### Step Two
+Combine the two maps using `tmap_arrange` to compare and contrast life expectancy rates.
+
+##### *Life Expectancy in South America and Africa*:\*
+
+```{r fig.cap="Fig 3: A Comparision of Life Expectancy between South America and Africa", fig.alt = "A figure comparing life expectancy between South America and Africa. South America is visualized with two-year increments, while Africa is visualized with 5-year increments.", fig.align = "center"}
+combined_lifeexp <- tmap_arrange(lifeexp_sa,lifeexp_africa) # combine the two life expectancy maps using tmap_arrange
+
+combined_lifeexp
+```
+
+### Conclusion
+
+This project was to practice creating maps in R using `sf`, `tmap`, and `spData` packages. 
+
