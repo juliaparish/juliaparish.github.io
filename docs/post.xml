@@ -31,17 +31,6 @@
       <media:content url="juliaparish.github.io/posts/2021-12-01-mapping-habitat-remote-sensing/images/sophora.jpeg" medium="image" type="image/jpeg"/>
     </item>
     <item>
-      <title>Cartography Assignment</title>
-      <dc:creator>Grace Kumaishi, Julia Parish</dc:creator>
-      <link>juliaparish.github.io/posts/2021-10-03-life-expectancy</link>
-      <description>Maps for life expectacy in Africa and South America</description>
-      <category>R</category>
-      <category>GIS</category>
-      <guid>juliaparish.github.io/posts/2021-10-03-life-expectancy</guid>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      <media:content url="juliaparish.github.io/posts/2021-10-03-life-expectancy/images/combined_lifeexp.png" medium="image" type="image/png" width="2100" height="2100"/>
-    </item>
-    <item>
       <title>What is the effect of sea surface temperature on coral bleaching?</title>
       <dc:creator>Julia Parish, Cullen Molitor, Ryan Munnikhuis, and Desik Somasundaram</dc:creator>
       <link>juliaparish.github.io/posts/2021-11-13-seasurface-temp-corals</link>
@@ -50,17 +39,6 @@
       <guid>juliaparish.github.io/posts/2021-11-13-seasurface-temp-corals</guid>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       <media:content url="juliaparish.github.io/posts/2021-11-13-seasurface-temp-corals/images/rowleycredit-scott-portelli.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Effects of Winter Storm Uri</title>
-      <dc:creator>Grace Kumaishi, Julia Parish</dc:creator>
-      <link>juliaparish.github.io/posts/2021-10-25-winterstormuri</link>
-      <description>An analysis on the effects of the mega winterstorm Uri on power utilities in Houston, Texas</description>
-      <category>R</category>
-      <category>GIS</category>
-      <guid>juliaparish.github.io/posts/2021-10-25-winterstormuri</guid>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="juliaparish.github.io/posts/2021-10-25-winterstormuri/images/comparison_map.png" medium="image" type="image/png" width="2582" height="2100"/>
     </item>
   </channel>
 </rss>
