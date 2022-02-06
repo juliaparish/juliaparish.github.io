@@ -3,7 +3,7 @@ title: "What is the effect of sea surface temperature on coral bleaching?"
 description: |
   A synthesis project merging different datasets to gain new insights sea surface temperature on coral bleaching.
 author:
-  - name: Julia Parish, Cullen Molitor, Ryan Munnikhuis, and Desik Somasundaram
+  - name: Cullen Molitor, Ryan Munnikhuis, Desik Somasundaram, Julia Parish
     url: https://github.com/desik23/eds-213-group-project
 date: 2021-11-13
 bibliography: bibliography.bib
@@ -16,7 +16,7 @@ output:
 categories:
   - R
 draft: false
-preview: images/rowleycredit-scott-portelli.jpg
+preview: images/rowleycreditscottportelli.jpg
 ---
 
 ```{r setup, include=FALSE}
@@ -43,6 +43,21 @@ What is the effect of sea surface temperature on coral bleaching?
 Our group discovered the Scott Reef and Rowley Shoals Coral Bleaching Data dataset while searching the DataOne repository for “coral bleaching.” This particular dataset focuses on long-term monitoring data from 1994 to 2017 at reef slope habitats off the coast of northwestern Australia. The metadata includes the reef system, date range, taxonomy, habitat type, coral coverage, and dataset methods. 
 
 **Search terms:** coral bleaching, El Nino effect data, sea surface temperature data, species diversity
+
+<figure>
+
+<img src="./images/scott_reef_map.png" alt="A map of western Australia and isolated Scott Reef and Rowley Shoals which lie off Australia’s northwestern coast" style="width:100%;"/>
+
+<figcaption>
+
+Scott Reef and Rowley Shoals lie 250 km off Australia’s northwestern coast.<br>
+*Image Credit: James Urton*
+
+</figcaption>
+
+</figure>
+
+
 
 ## Data Management and Analysis Workflow
 

@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## **Education**
-**Master of Environmental Data Science** | Expected 2022
+**Master of Environmental Data Science** | Expected June 2022
 <br>&nbsp;Bren School of Environmental Science & Management
 <br>&nbsp;University of California, Santa Barbara
 
@@ -51,42 +51,48 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>- *Outreach Specialist* | 12/2007 to 11/2008
 <br>- *Field Technician (AmeriCorps)* | 12/2006 - 11/2007
 
-## Certifications &  Licenses
+**Organization for Tropical Studies** | La Selva Biological Station, Puerto Viejo de Sarapiqui, Costa Rica <br>
+**National Science Foundation** and **Duke University** <br>
+Research Education for Undergraduates <br>
+*Research Fellow* | 06/2006 - 08/2006
 
-- Mental Health First Aid USA, 2021<br>
-- California Qualified Applicator License, 2017<br>
-- United States Geological Services Brown Treesnake Rapid Response Team, 2014<br>
 
-## Publications
+## Certifications & Licenses
 
-- Duffy, D., Parish, J., et al. (2015). Has the Small Indian Mongoose Become Established on Kauai
-Island, Hawaii? *Pacific Science*, 69(4), 559-565. https://doi.org/10.2984/69.4.9
+**Adult Mental Health First Aid** - Mental Health First Aid USA, 2021 <br>
+**Diversity & Equity Training** – Cream City Conservation & Consulting, 2021 <br>
+**California Qualified Applicator License** – CA Dept. of Pesticide Regulation, 2017<br>
+**Brown Treesnake Rapid Response Team** - United States Geological Services, 2014<br>
 
-## Articles
+## Skills
 
-- Mazurkiewicz, D., Parish, J., et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. *Fremontia*, 45(3), 26. 
+| **Programming Languages:** R, Python, SQL, Bash, Markdown, familiar with HTML and CSS
+| **Software:** Microsoft Office Suite, Google Workspace, ESRI (ArcGIS, ArcGIS Online, ArcPro), R Studio, Git, GitHub, Jupyter Lab & Notebook, Binder, Google Earth Engine, Tableau, Zoom, Prezzi, pgAdmin, QGis, SQLite
+| **Project Management:** Github Issues, Asana, Basecamp, Podio, Slack, Clockify, Zotero, Zenhub
 
--	**Parish, J.** (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. *Ecosystems Management Program Bulletin* 48, 4-6.
+## Publications & Articles
+
+| Duffy, D., Parish, J., et al. (2015). Has the Small Indian Mongoose Become Established on Kauai Island, Hawaii? *Pacific Science*, 69(4), 559-565. https://doi.org/10.2984/69.4.9 <br>
+| Mazurkiewicz, D., Parish, J., et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. *Fremontia*, 45(3), 26. <br>
+| **Parish, J.** (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. *Ecosystems Management Program Bulletin* 48, 4-6.
 
 ## Presentations & Posters
 
--	**Parish, J.** "Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses," Poster, *Island Invasives Symposium*. Dundee, Scotland. 2017.
-
--	**Parish, J.** “Prioritizing *Miconia calvescens* Survey on Oahu,” Presentation, *California Invasive Plant Council Symposium*, San Diego, CA. 2015.
-
--	**Parish, J.** “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI.” Poster. *Hawaii Conservation Conference*. Honolulu, HI. 2010.
-
--	**Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of *Paraponera clavata* to chemical compounds in plants.” *NSF REU Internship Summer Research Presentation.* La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. 2006.
+| **Parish, J.** "Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses" Poster. *Island Invasives Symposium*. Dundee, Scotland. 2017. <br>
+| **Parish, J.** “Prioritizing *Miconia calvescens* Survey on Oahu” Presentation. *California Invasive Plant Council Symposium*, San Diego, CA. 2015. <br>
+| Saunter, M., Nimz, I., Worcester, N., Vanderlip, C., **Parish, J.**, Marie, A. “Adapting Habitat Management to a Newly Colonized Indigenous Plant on Kure Atoll” Poster. *Hawaii Conservation Conference*. Honolulu, HI. July 2013.<br>
+| **Parish, J.** “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI” Poster. *Hawaii Conservation Conference*. Honolulu, HI. 2010. <br>
+| **Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of *Paraponera clavata* to chemical compounds in plants.” Presentation. *NSF REU Internship Summer Research Project*. La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. 2006. <br>
 
 ## Professional Affiliations
 
-- **Board Member, Secretary, President** | California Invasive Plant Council 2017 – 2021<br>
-- **Member** | California Native Plant Society 2016 – Present<br>
-- **Member** | Society for Ecological Restoration 2019 – 2021<br>
-- **Member** | San Diego County Weed Management Area 2018 – 2021<br> 
-- **Board Member** | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019<br>
-- **Board Member** | Southern California Botanical Society 2017 - 2018<br>
-- **Member** | Los Angeles County Weed Management Area 2015 - 2018<br>
+**Board Member, Secretary, President** | California Invasive Plant Council 2017 – 2021<br>
+**Member** | California Native Plant Society 2016 – Present<br>
+**Member** | Society for Ecological Restoration 2019 – 2021<br>
+**Member** | San Diego County Weed Management Area 2018 – 2021<br> 
+**Board Member** | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019<br>
+**Board Member** | Southern California Botanical Society 2017 - 2018<br>
+**Member** | Los Angeles County Weed Management Area 2015 - 2018<br>
 
 
 
