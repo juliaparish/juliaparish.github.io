@@ -26,54 +26,56 @@ knitr::opts_chunk$set(echo = TRUE)
 ## **Master's Capstone Project**
 **Snow Today**, 01/2022 to Present<br>
 **Role:** Communications Manager | **Client:** UCSB Earth Research Institute <br> 
-**Deliverable:** Develop an interactive web application to visualize and access remote sensed snow data. 
+- Developing an interactive Python-based web application to visualize snow cover and albedo data to expand data availability and the geographical extend of remotely sensed snow data. <br>
+- Creating data and website navigation Python-based tutorials and writing technical documentation to educate global users on Snow Today snow condition data.
+ 
 
 ## **Experience**
 
 **American Conservation Experience** | San Diego, CA
-<br>- *Restoration Specialist* | 04/2020 to 07/2021
-<br>- *Director* | 06/2018 to 04/2020
+<br>- *Restoration Specialist* | 04/20 to 07/21
+<br>- *Director* | 06/18 to 04/20
 
-**Catalina Island Conservancy** | 04/2015 to 07/2018
-<br>*Plant Conservation Manager* | Avalon, CA
+**Catalina Island Conservancy** | Avalon, CA <br>
+*Plant Conservation Manager* | 04/15 to 07/18
 
-**Oahu Invasive Species Committee** | 12/2012 to 04/2015<br>
-*Director* | Honolulu, HI
+**Oahu Invasive Species Committee** | Honolulu, HI <br>
+*Director* | 12/12 to 04/15
 
-**Center for Conservation Research and Training at the University of Hawaii** | 07/2010 to 12/2012<br>
-*CCRT Field Project Support Assistant* | Honolulu, HI
+**Center for Conservation Research and Training at the University of Hawaii** | Honolulu, HI and Papahanaumokuakea National Marine Monument <br>
+*CCRT Field Project Support Assistant* | 07/10 to 12/12
 
 **Center for Environmental Management of Military Lands** | Hilo, HI
-<br>- *Botanist (Research Assistant I)* | 11/2008 to 06/2009
-<br>- *Incipient Weed Control Biologist (Research Assistant II)* | 07/2009 to 07/2010
+<br>- *Botanist (Research Assistant I)* | 11/08 to 06/09
+<br>- *Incipient Weed Control Biologist (Research Assistant II)* | 07/09 to 07/10
 
 **Oahu Invasive Species Committee** | Honolulu, HI
-<br>- *Outreach Specialist* | 12/2007 to 11/2008
-<br>- *Field Technician (AmeriCorps)* | 12/2006 - 11/2007
+<br>- *Outreach Specialist* | 12/07 to 11/08
+<br>- *Field Technician (AmeriCorps)* | 12/06 - 11/07
 
 **Organization for Tropical Studies** | La Selva Biological Station, Puerto Viejo de Sarapiqui, Costa Rica <br>
-**National Science Foundation** and **Duke University** <br>
-Research Education for Undergraduates <br>
-*Research Fellow* | 06/2006 - 08/2006
+**National Science Foundation** and **Duke University** Research Education for Undergraduates <br>
+*Research Fellow* | 06/06 - 08/06
 
 
 ## Certifications & Licenses
 
+**Cartography** - ESRI MOCC, 2022 <br>
 **Adult Mental Health First Aid** - Mental Health First Aid USA, 2021 <br>
 **Diversity & Equity Training** – Cream City Conservation & Consulting, 2021 <br>
-**California Qualified Applicator License** – CA Dept. of Pesticide Regulation, 2017<br>
+**California Qualified Applicator License** – CA Department of Pesticide Regulation, 2017<br>
 **Brown Treesnake Rapid Response Team** - United States Geological Services, 2014<br>
 
 ## Skills
 
 | **Programming Languages:** R, Python, SQL, Bash, Markdown, familiar with HTML and CSS
-| **Software:** Microsoft Office Suite, Google Workspace, ESRI (ArcGIS, ArcGIS Online, ArcPro), R Studio, Git, GitHub, Jupyter Lab & Notebook, Binder, Google Earth Engine, Tableau, Zoom, Prezzi, pgAdmin, QGis, SQLite
+| **Software:** Anaconda Navigator, ESRI (ArcGIS, ArcGIS Pro), R Studio, Git, GitHub, Jupyter Lab, Jupyter Notebook, Binder, Google Earth Engine, Tableau Desktop, Tableau Prep, pgAdmin, QGIS, SQLite, Microsoft Office Suite, Google Workspace, Zoom, Prezzi, Wix
 | **Project Management:** Github Issues, Asana, Basecamp, Podio, Slack, Clockify, Zotero, Zenhub
 
 ## Publications & Articles
 
-| Duffy, D., Parish, J., et al. (2015). Has the Small Indian Mongoose Become Established on Kauai Island, Hawaii? *Pacific Science*, 69(4), 559-565. https://doi.org/10.2984/69.4.9 <br>
-| Mazurkiewicz, D., Parish, J., et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. *Fremontia*, 45(3), 26. <br>
+| Duffy, D., **Parish, J.**, et al. (2015). Has the Small Indian Mongoose Become Established on Kauai Island, Hawaii? *Pacific Science*, 69(4), 559-565. https://doi.org/10.2984/69.4.9 <br>
+| Mazurkiewicz, D., **Parish, J.**, et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. *Fremontia*, 45(3), 26. <br>
 | **Parish, J.** (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. *Ecosystems Management Program Bulletin* 48, 4-6.
 
 ## Presentations & Posters
