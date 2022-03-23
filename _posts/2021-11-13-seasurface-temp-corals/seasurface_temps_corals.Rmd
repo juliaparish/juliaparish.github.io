@@ -16,7 +16,7 @@ output:
 categories:
   - R
 draft: false
-preview: images/rowleycreditscottportelli.jpg
+preview: images/rowley.jpg
 ---
 
 ```{r setup, include=FALSE}
