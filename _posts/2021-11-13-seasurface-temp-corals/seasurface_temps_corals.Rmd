@@ -15,7 +15,7 @@ output:
     toc_float: true #float it (positioned on the left)
 categories:
   - R
-draft: false
+  - Database management
 preview: images/rowley.jpg
 ---
 
