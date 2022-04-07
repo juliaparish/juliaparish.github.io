@@ -22,7 +22,7 @@ preview: images/sophora.jpeg
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This remote sensing project was completed as an assignment for my Master's program course, Environmental Data Science 220: Remote Sensing.
+This remote sensing project was completed as an assignment for my Master's program course, Environmental Data Science 220: Remote Sensing and Environmental Data.
 
 
 ## Project Details
