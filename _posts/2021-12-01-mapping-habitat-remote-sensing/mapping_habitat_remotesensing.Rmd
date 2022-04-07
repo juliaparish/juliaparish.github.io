@@ -3,7 +3,7 @@ title: "Mapping Habitat Suitability of Sophora gypsohila"
 description: |
   Mapping habitat suitability for the identification and conservation of the Guadalupe Mountain necklacepod (Sophora gypsophila) using Landsat 8 data
 author:
-  - name: Julia Parish, Wylie Hampson, Shale Hunter, Alex Vand
+  - name: Alex Vand, Wylie Hampson, Shale Hunter, Julia Parish 
     url: https://github.com/jaws-bren
 date: 2021-12-01
 output:
@@ -13,7 +13,7 @@ output:
     toc: true # add a table of contents
     toc_float: true #float it (positioned on the left)
 categories:
-  - R
+  - Python
   - Remote Sensing
 preview: images/sophora.jpeg
 ---
@@ -31,7 +31,7 @@ This project was created to provide an introduction to using satellite data from
 
 Landsat 8 is a joint effort between USGS and NASA, with data collected from 2013-04-11 to the present. This particular dataset is the atmospherically corrected surface reflectance and land surface temperature from the Landsat 8 OLI/TIRS sensors.
 
-This project used the Google Earth Engine API to download Landsat 8 data in order to explore potential habitat for an endangered plant species. By comparing NDVI and OIF bands, this study was able to determine possible regions of high gypsum concentration in the Guadalupe Mountains. All analysis was completed in Jupyter Lab using Python.
+This project used the Google Earth Engine API to download Landsat 8 data in order to explore potential habitat for an endangered plant species. By comparing Normalized Difference Vegetation Index (NVDI) and optimal index factor (OIF) bands, this study was able to determine possible regions of high gypsum concentration in the Guadalupe Mountains. All analysis was completed in Jupyter Lab using Python.
 
 ## Installation
 
@@ -57,7 +57,7 @@ Potential suitable habitat for *Sophora gypsophila* is located in the Guadalupe 
 ![Creating region of interest](images/buffer.png)
 
 ### Analysis parameters
-First, we use the difference between bands 6 and 7 divided by their sum (normalized ratio similar to NDVI calculation) to identify the normalized difference gypsum index for gypsic soils. The equation is Band 6 - Band 7)/(Band 6 + Band 7). We expect to produce a map that displays white for potential areas with high gypsic content.
+First, we use the difference between bands 6 and 7 divided by their sum (normalized ratio similar to NDVI calculation) to identify the normalized difference gypsum index for gypsic soils. The equation is (Band 6 - Band 7)/(Band 6 + Band 7). We expect to produce a map that displays white for potential areas with high gypsic content.
 
 ![Python Normalized Difference for Gypsum Soil](images/normalized_difference_gypsum.png)
 
@@ -67,7 +67,7 @@ We expected a map to display areas with high gypsic soils as white. There was a 
 
 ![Intermediate analysis](images/bw.png)
 
-To fix this, we added another band, this time calculating Normalized Difference Vegetation Index (NDVI) with the same math we used to calculate the normalized difference gypsum index, but using bands 4 (red) and 5 (near-infrared).
+To fix this, we added another band, this time calculating NDVI with the same math we used to calculate the normalized difference gypsum index, but using bands 4 (red) and 5 (near-infrared).
 
 NDVI is a dimensionless index that captures the difference between visible and near-infrared reflectance used to estimate vegetation cover.
 
@@ -76,11 +76,11 @@ By mapping normalized difference gypsum index and NDVI together, we should be ab
 ![Final analysis](images/result.png)
 In summary, this project used the Google Earth Engine API to download Landsat 8 data in order to explore potential habitat for an endangered plant species. *Sophora gypsophila* is endangered, therefore data for  known locations is not available to the public. By comparing NDVI and normalized difference gypsum index bands, this study was able to determine possible regions of high gypsum concentration in the Guadalupe Mountains. These gypsic soil regions are potential suitable habitat to rare, endemic species such as *Sophora gypsophila*.
 
-Gypsic soil areas were mapped using the difference ratio of Bands 6 and 7. After plotting the normalized difference gypsum index with the NDVI we can see areas that are presumed to be gypics soils standout much more compared to areas that are known to have vegetation.
+Gypsic soil areas were mapped using the difference ratio of Bands 6 and 7. After plotting the normalized difference gypsum index with the NDVI, we can see areas that are presumed to be gypics soils standout much more compared to areas that are known to have vegetation.
 
 ## Future Research and Other Use Cases
 
-This analysis use case allows biologist to prioritize areas of potential habitat suitability for survey for rare, threatened species such as S. gypsophila. Field surveys could be conducted to determine predictive accuracy via ground truthing. Another consideration to calculate more precise estimates for S. gypsophila habitat would be to overlay an elevation map and select for gypsic soil and elevation range. The known elevation range of S. gypsophila populations is between 1,000 and 5,000 feet above sea level. Combining both areas of high gypsic soil and elevation data would provide more precise suitabile habitat areas. An additional step in adapting Landsat data for conservation purposes would be comparing the identified potential Sophora habitat with land ownership maps in the region to target separate management solutions for public and private land.
+This analysis use case allows biologist to prioritize areas of potential habitat suitability for survey for rare, threatened species such as *S. gypsophila*. Field surveys could be conducted to determine predictive accuracy via ground truthing. Another consideration to calculate more precise estimates for *S. gypsophila* habitat would be to overlay an elevation map and select for gypsic soil and elevation range. The known elevation range of *S. gypsophila* populations is between 1,000 and 5,000 feet above sea level. Combining both areas of high gypsic soil and elevation data would provide more precise suitabile habitat areas. An additional step in adapting Landsat data for conservation purposes would be comparing the identified potential *Sophora* habitat with land ownership maps in the region to target separate management solutions for public and private land.
 
 General uses for this type of analysis is far reaching. Federal agencies or renewable energy developers could use this analysis to predict areas where rare or threatened plant species may be located but there is a lack of accurate population distribution documentation, areas coined as "botanical black holes". Identifying areas that may have high level of endemism may assist with environmental impact assessments or future graduate research sites. This analysis could also be used identifying locations for new agricultural areas or for potential renewable energy development suitablility. Similar case studies have successfully identified soils with high salts content.
 
