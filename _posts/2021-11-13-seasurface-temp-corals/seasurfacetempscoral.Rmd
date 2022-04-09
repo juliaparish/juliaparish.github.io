@@ -1,0 +1,173 @@
+---
+title: "What is the effect of sea surface temperature on coral bleaching?"
+description: |
+  A synthesis project merging different datasets to gain new insights sea surface temperature on coral bleaching.
+author:
+  - name: Cullen Molitor, Ryan Munnikhuis, Desik Somasundaram, Julia Parish
+    url: https://github.com/desik23/eds-213-group-project
+date: 2021-11-13
+bibliography: bibliography.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+    toc: true # add a table of contents
+    toc_float: true #float it (positioned on the left)
+categories:
+  - R
+  - Database management
+preview: images/rowley.jpg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(metajam)
+library(tidyverse)
+library(here)
+library(lubridate)
+library(httr2)
+library(purrr)
+library(janitor)
+library(XML)
+library(zoo)
+library(vegan)
+```
+
+This group project was completed as an assignment for my Master's program course, Environmental Data Science 213: Metadata Standards, Data Modeling, and Data Semantics. The goal of the group project was to practice the re-use of data for a synthesis project merging different datasets to get new insights, as well as preserving scientific products on a data repository.
+
+## Environmental Question:
+What is the effect of sea surface temperature on coral bleaching?
+
+Our group discovered the Scott Reef and Rowley Shoals Coral Bleaching Data dataset while searching the DataOne repository for “coral bleaching.” This particular dataset focuses on long-term monitoring data from 1994 to 2017 at reef slope habitats off the coast of northwestern Australia. The metadata includes the reef system, date range, taxonomy, habitat type, coral coverage, and dataset methods. 
+
+**Search terms:** coral bleaching, El Nino effect data, sea surface temperature data, species diversity
+
+![Scott Reef and Rowley Shoals lie 250 km off Australia’s northwestern coast.<br>
+*Image Credit: James Urton*](images/scott_reef_map.png)
+
+## Data Management and Analysis Workflow
+
+Coral data was downloaded for the local coral reef ecosystems at Rowley Shoals (RS) and Scott Reef (SR) systems in Northwest Australia. Data on the monthly input to Ocean Nino Index was used to compute the 3 month mean of the temperature anomaly. Both datasets were combined to align the time periods. Then a Simpson’s Diversity Index (SDI) was computed using the functions available in the vegan R package to draw the potential relationships between the temperature anomaly and coral species diversity. The data will be preserved until the SDI methodology has been superseded by more significant research. Our group used a KNB project repository to preserve our data due to their reputation, reliability and commitment to the future in case of company changes. 
+
+### Potential Legal Implications
+Currently, there are no legal constraints associated with acquiring, using and sharing the project data that we are aware of.
+
+## Data Download Process
+
+### Read in coral data from DataOne
+```{r, error = TRUE, message = FALSE, warning = FALSE}
+# assign data url to access coral data from DataOne then download
+data_url <- "https://cn.dataone.org/cn/v2/resolve/https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fdata%2Feml%2Fedi%2F952%2F1%2Ff6212784c45d0a077f2c863868d22c4b"
+
+# If data is already up to date, this will throw an error
+# error=T in header will move past this issue
+#download_d1_data(data_url, dir_name = "data", path = ".")
+```
+
+```{r, include=FALSE}
+# assign data path
+data_path <- "data"
+```
+
+```{r}
+# Read in data with metajam
+coral_list <- read_d1_files(data_path)
+```
+
+```{r, include=FALSE}
+# Pick out the data read in above and clean it up
+corals <- coral_list$data %>% 
+  janitor::clean_names() %>% 
+  dplyr::mutate(year_decimal = format(date_decimal(year_decimal), "%Y-%m-%d"),
+         month = month(year_decimal),
+         year = year(year_decimal)) %>% 
+  dplyr::rename(date = year_decimal)
+```
+
+### Read in Oceanic Niño Index (ONI) dataset
+```{r}
+# Read in  ONI to be joined to coral data
+oni <- read.table(
+  "https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/detrend.nino34.ascii.txt",
+  header = T) %>%
+  dplyr::mutate(date = as.Date(ISOdate(YR, MON, 1)),
+                date_start = as.Date(ISOdate(YR, MON, 1)),
+                date_end = ceiling_date(date_start, "month")) %>%
+  dplyr::rename(oni_anomaly = ANOM,
+                month = MON,
+                year = YR) %>% 
+  dplyr::select(year, month, oni_anomaly, date_start, date_end) %>% 
+  dplyr::mutate(roll_3_month_mean = zoo::rollmean(x = oni_anomaly, k = 3, fill = NA, align = "right")) %>% 
+  filter(date_start > ymd("1994-09-01"))
+```
+
+## Data Analysis
+
+### Joining the two datasets (ONI and coral reef) and calculating the Simpson's Diversity Index
+
+Simpson's Diversity Index is a measure of diversity which takes into account the number of species present, as well as the relative abundance of each species. As species richness and evenness increase, diversity increases.
+
+```{r}
+# join corals and ONI data
+coral_oni <- corals %>% 
+  pivot_longer(cols = 5:18, names_to = "species", values_to = "cover") %>% 
+  dplyr::group_by(system, reef, year, month, location) %>% 
+  dplyr::summarise(simpson_index = vegan::diversity(cover, index = "simpson")) %>% 
+  dplyr::left_join(oni %>% select(-date_start, -date_end)) %>% 
+  dplyr::mutate(date = lubridate::make_date(year = year, month = month, day = 1))
+```
+
+```{r, include=FALSE}
+#Un-comment line below to write the updated csv file
+readr::write_csv(coral_oni, here("coral_diversity_oceanic_nino_index.csv"))
+```
+
+## Visualizing the data
+
+### Plotting  coral diversity data with the ONI color bar
+```{r fig.height=4, fig.width=9}
+ggplot2::ggplot() +
+  ggplot2::geom_rect(
+    data = oni,
+    aes(xmin = date_start, xmax = date_end, ymin = -Inf, ymax = .3, fill = oni_anomaly)) +
+  ggplot2::scale_fill_viridis_c(
+    option = "plasma",
+    guide = guide_colorbar(direction = "horizontal", title.position = "top",
+                           order = 2, barheight = unit(.2, "cm"))) +
+  ggplot2::scale_x_date(date_breaks = "2 year", date_labels = "%Y", expand = expansion(mult = c(0,0))) +
+  ggplot2::geom_line(data = coral_oni, size = 1,
+                     aes(x = date, y = simpson_index, color = location)) +
+  ggplot2::scale_color_viridis_d() +
+  ggplot2::guides(color = guide_legend(order = 1)) +
+  ggplot2::labs(fill = "Oceanic Ni\u00f1o Index", color = "Sites", 
+                x = "Date", y = "Simpsons Diversity Index") +
+  ggplot2::theme_minimal()
+```
+Simpson’s Diversity Index calculated by site from 14 taxa of corals plotted from 1994 to 2021. The Oceanic Niño Index monthly values are plotted as a colorbar to highlight duration and intensity of sea surface temperatures in the Niño region 3.4. 
+
+## Data Preservation
+
+Our group used a Knowledge Network for Biocomplexity (KNB) project repository to preserve our data due to its reputation, reliability, and commitment to the future access regardless of transitions with in the organization. Data will be preserved and relevant until the Simpson’s Diversity Index methodology has been superseded by more significant research. 
+
+[KNB Ecoinformatic site](https://knb.ecoinformatics.org/view/urn%3Auuid%3Af8930217-24e9-4d1a-95a7-c64b8b6ea64d)
+
+## Data Sources:\
+
+James P Gilmour, Kylie L Cook, and Nicole M Ryan. 2021. Scott Reef and Rowley Shoals Coral Bleaching Data. Environmental Data Initiative.<br>
+[LTER Data Access](https://pasta.lternet.edu/package/metadata/eml/edi/952/1.)<br>
+- **Download Method:** metajam data_downloade API<br>
+- **Spatial Coverage**: Scott Reef and Rowley Reef Ecosystems in - Northwestern Australia<br>
+- **Temporal Coverage**: 1994 to 2020<br>
+- **Parameters of Interest for Analysis:** Species Population<br>
+
+NOAA/ National Weather Service National Centers for Environmental Prediction Climate Prediction Center Oceanic Niño Index (ONI).<br> [NOAA ENSO Data](https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/detrend.nino34.ascii.txt)<br>
+- **Download Method:** read.table from base R<br>
+- **Spatial Coverage**: 5N to 5S, 170W to 120W<br>
+- **Temporal Coverage**: 1950 to 2021<br>
+- **Parameters of Interest for Analysis:** SST Anomaly<br> 
+
+
+

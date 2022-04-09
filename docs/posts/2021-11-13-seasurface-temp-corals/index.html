@@ -130,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bibliography.bib","data/coral_diversity_oceanic_nino_index.csv","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral__attribute_metadata.csv","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral__full_metadata.xml","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral__summary_metadata.csv","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral.csv","images/rowley.jpg","images/rowleycreditscottportelli.jpg","images/Scott_and_Seringapatam-ReefBase.jpg","images/scott_reef_map.png","images/scottreef_bleaching_abcnews.jfif","metajam.log","seasurface_temps_corals_files/anchor-4.2.2/anchor.min.js","seasurface_temps_corals_files/bowser-1.9.3/bowser.min.js","seasurface_temps_corals_files/distill-2.2.21/template.v2.js","seasurface_temps_corals_files/figure-html5/unnamed-chunk-9-1.png","seasurface_temps_corals_files/header-attrs-2.11/header-attrs.js","seasurface_temps_corals_files/jquery-3.6.0/jquery-3.6.0.js","seasurface_temps_corals_files/jquery-3.6.0/jquery-3.6.0.min.js","seasurface_temps_corals_files/jquery-3.6.0/jquery-3.6.0.min.map","seasurface_temps_corals_files/popper-2.6.0/popper.min.js","seasurface_temps_corals_files/tippy-6.2.7/tippy-bundle.umd.min.js","seasurface_temps_corals_files/tippy-6.2.7/tippy-light-border.css","seasurface_temps_corals_files/tippy-6.2.7/tippy.css","seasurface_temps_corals_files/tippy-6.2.7/tippy.umd.min.js","seasurface_temps_corals_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["bibliography.bib","data/coral_diversity_oceanic_nino_index.csv","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral__attribute_metadata.csv","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral__full_metadata.xml","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral__summary_metadata.csv","data/Rowley_Shoals_and_Scott_Reef_Long-term_Reef_Slope_coral.csv","images/rowley.jpg","images/rowleycreditscottportelli.jpg","images/Scott_and_Seringapatam-ReefBase.jpg","images/scott_reef_map.png","seasurfacetempscoral_files/anchor-4.2.2/anchor.min.js","seasurfacetempscoral_files/bowser-1.9.3/bowser.min.js","seasurfacetempscoral_files/distill-2.2.21/template.v2.js","seasurfacetempscoral_files/figure-html5/unnamed-chunk-9-1.png","seasurfacetempscoral_files/header-attrs-2.11/header-attrs.js","seasurfacetempscoral_files/jquery-3.6.0/jquery-3.6.0.js","seasurfacetempscoral_files/jquery-3.6.0/jquery-3.6.0.min.js","seasurfacetempscoral_files/jquery-3.6.0/jquery-3.6.0.min.map","seasurfacetempscoral_files/popper-2.6.0/popper.min.js","seasurfacetempscoral_files/tippy-6.2.7/tippy-bundle.umd.min.js","seasurfacetempscoral_files/tippy-6.2.7/tippy-light-border.css","seasurfacetempscoral_files/tippy-6.2.7/tippy.css","seasurfacetempscoral_files/tippy-6.2.7/tippy.umd.min.js","seasurfacetempscoral_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2494,10 +2494,7 @@ Show code
 <p>Our group discovered the Scott Reef and Rowley Shoals Coral Bleaching Data dataset while searching the DataOne repository for “coral bleaching.” This particular dataset focuses on long-term monitoring data from 1994 to 2017 at reef slope habitats off the coast of northwestern Australia. The metadata includes the reef system, date range, taxonomy, habitat type, coral coverage, and dataset methods.</p>
 <p><strong>Search terms:</strong> coral bleaching, El Nino effect data, sea surface temperature data, species diversity</p>
 <figure>
-<p><img src="images/scott_reef_map.png" alt="A map of western Australia and isolated Scott Reef and Rowley Shoals which lie off Australia’s northwestern coast" style="width:100%;"/></p>
-<figcaption>
-<p>Scott Reef and Rowley Shoals lie 250 km off Australia’s northwestern coast.<br> <em>Image Credit: James Urton</em></p>
-</figcaption>
+<img src="images/scott_reef_map.png" alt="Scott Reef and Rowley Shoals lie 250 km off Australia’s northwestern coast.  Image Credit: James Urton" /><figcaption aria-hidden="true">Scott Reef and Rowley Shoals lie 250 km off Australia’s northwestern coast.<br> <em>Image Credit: James Urton</em></figcaption>
 </figure>
 <h2 id="data-management-and-analysis-workflow">Data Management and Analysis Workflow</h2>
 <p>Coral data was downloaded for the local coral reef ecosystems at Rowley Shoals (RS) and Scott Reef (SR) systems in Northwest Australia. Data on the monthly input to Ocean Nino Index was used to compute the 3 month mean of the temperature anomaly. Both datasets were combined to align the time periods. Then a Simpson’s Diversity Index (SDI) was computed using the functions available in the vegan R package to draw the potential relationships between the temperature anomaly and coral species diversity. The data will be preserved until the SDI methodology has been superseded by more significant research. Our group used a KNB project repository to preserve our data due to their reputation, reliability and commitment to the future in case of company changes.</p>
@@ -2604,7 +2601,7 @@ Show code
 </code></pre>
 </div>
 </details>
-<p><img src="seasurface_temps_corals_files/figure-html5/unnamed-chunk-9-1.png" width="864" /></p>
+<p><img src="seasurfacetempscoral_files/figure-html5/unnamed-chunk-9-1.png" width="864" /></p>
 </div>
 <p>Simpson’s Diversity Index calculated by site from 14 taxa of corals plotted from 1994 to 2021. The Oceanic Niño Index monthly values are plotted as a colorbar to highlight duration and intensity of sea surface temperatures in the Niño region 3.4.</p>
 <h2 id="data-preservation">Data Preservation</h2>
