@@ -46,7 +46,7 @@ Our group discovered the Scott Reef and Rowley Shoals Coral Bleaching Data datas
 **Search terms:** coral bleaching, El Nino effect data, sea surface temperature data, species diversity
 
 ![Scott Reef and Rowley Shoals lie 250 km off Australia’s northwestern coast.<br>
-*Image Credit: James Urton*](images/scott_reef_map.png)
+*Image Credit: Taryn Foster*](images/map.png)
 
 ## Data Management and Analysis Workflow
 
