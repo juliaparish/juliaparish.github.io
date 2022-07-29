@@ -3,7 +3,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
-
 data/
-images/
 rosm.cache/
+coral_diversity_oceanic_nino_index.csv

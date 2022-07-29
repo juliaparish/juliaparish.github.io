@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## **Education**
-**Master of Environmental Data Science** | Expected June 2022
+**Master of Environmental Data Science** | June 2022
 <br>&nbsp;Bren School of Environmental Science & Management
 <br>&nbsp;University of California, Santa Barbara
 
@@ -24,13 +24,15 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>&nbsp;University of Hawaii at Manoa
 
 ## **Master's Capstone Project**
-**Snow Today**, 01/2022 to Present<br>
+**Snow Today**, 01/2022 to 06/2022<br>
 **Role:** Communications Manager | **Client:** UCSB Earth Research Institute <br> 
-- Developing an interactive Python-based web application to visualize snow cover and albedo data to expand data availability and the geographical extend of remotely sensed snow data. <br>
-- Creating data and website navigation Python-based tutorials and writing technical documentation to educate global users on Snow Today snow condition data.
- 
+-	Developed an interactive R Shiny web application to visualize snow cover and albedo data to expand data availability of remotely sensed snow data. <br>
+-	Created data analysis, processing, and visualization tutorials in Python and wrote technical documentation to educate users on remotely sensed snow condition data.
 
 ## **Experience**
+
+**Center for Conservation Biology - UC Riverside** | Remote, Riverside, CA
+<br>- *Data Science Fellow* | 07/20 to Present
 
 **American Conservation Experience** | San Diego, CA
 <br>- *Restoration Specialist* | 04/20 to 07/21
@@ -53,13 +55,18 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>- *Outreach Specialist* | 12/07 to 11/08
 <br>- *Field Technician (AmeriCorps)* | 12/06 - 11/07
 
+
+## **Undergraduate Research**
+
 **Organization for Tropical Studies** | La Selva Biological Station, Puerto Viejo de Sarapiqui, Costa Rica <br>
 **National Science Foundation** and **Duke University** Research Education for Undergraduates <br>
 *Research Fellow* | 06/06 - 08/06
 
+**Objective:** Independent research study to detect secondary metabolites in ethnobotanically important plant species.
 
 ## Certifications & Licenses
 
+**Drone Camp** – University of California Agriculture & Natural Resources, 2022 <br>
 **Cartography** - ESRI MOCC, 2022 <br>
 **Adult Mental Health First Aid** - Mental Health First Aid USA, 2021 <br>
 **Diversity & Equity Training** – Cream City Conservation & Consulting, 2021 <br>
@@ -68,9 +75,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Skills
 
-| **Programming Languages:** R, Python, SQL, Bash, Markdown, familiar with HTML and CSS
-| **Software:** Anaconda Navigator, ESRI (ArcGIS, ArcGIS Pro), R Studio, Git, GitHub, Jupyter Lab, Jupyter Notebook, Binder, Google Earth Engine, Tableau Desktop, Tableau Prep, pgAdmin, QGIS, SQLite, Microsoft Office Suite, Google Workspace, Zoom, Prezzi, Wix
-| **Project Management:** Github Issues, Asana, Basecamp, Podio, Slack, Clockify, Zotero, Zenhub
+| **Programming Languages:** R, Python, SQL, familiar with HTML and CSS
+| **Software:** Anaconda Navigator, ESRI (ArcGIS, ArcGIS Pro), R Studio, Git, GitHub, Jupyter Lab, Jupyter Notebook, Binder, Google Earth Engine, Tableau Desktop, Tableau Prep, pgAdmin, QGIS, Microsoft Office Suite, Google Workspace, Zoom, Prezzi, Wix, Visual Studio Code
+| **Project Management:** Github Issues, Asana, Basecamp, Podio, Slack, Trello, Clockify, Zotero, Zenhub
 
 ## Publications & Articles
 
