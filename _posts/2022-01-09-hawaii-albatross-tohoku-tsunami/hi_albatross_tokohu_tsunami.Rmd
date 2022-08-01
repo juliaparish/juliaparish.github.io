@@ -61,7 +61,7 @@ This statistical analysis was completed as an assignment for my Master's program
 
 *Were albatross populations impacted by the 2011 Tōhoku tsunami event?*
 
-Researchers estimated the Tōhoku tsunami flooded between 26% - 52% of all Black-footed albatross nests and impacted more than 275,000 albatross nests throughout Papahānaumokuākea [@Reynolds:2017]. This post will attempt to analyze and quantify the impact of the Tōhoku tsunami on two Hawaiian albatross species, the Laysan albatross and the Black-footed albatross. 
+Researchers estimated the short term effects of the Tōhoku tsunami on albatross populations and concluded that the tsunami flooded between 26% - 52% of all Black-footed albatross nests and impacted more than 275,000 albatross nests throughout Papahānaumokuākea [@Reynolds:2017]. This post will attempt to analyze and quantify the long term impact of the Tōhoku tsunami on two Hawaiian albatross species populations, the Laysan albatross and the Black-footed albatross.
 
 ## Background
 
@@ -93,13 +93,11 @@ Adult and juvenile Laysan and Black-footed albatross on the coral runway of Hōl
 
 </figure>
 
-Papahānaumokuākea, also known as the Northwestern Hawaiian Islands, are comprised of atolls, reefs, and pinnacles, and are where 95% of all Black-footed albatross and 99% of Laysan albatross nest [@Arata:2009]. These low-lying islands are at extreme risk of inundation from tsunamis [@Reynolds:2017]. On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific region. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami also killed or injured thousands of marine and terrestrial species. Many wildlife species found in the Papahānaumokuākea Marine National Monument (PMNM) were impacted by the Tōhoku tsunami.
-
-_**Note**: The Short-tailed albatross was not included in this analysis as there is only one breeding pair in Hawaii._
+Papahānaumokuākea, also known as the Northwestern Hawaiian Islands, is comprised of atolls, reefs, and pinnacles. It is home to 95% of the Black-footed albatross and 99% of the Laysan albatross global population [@Arata:2009]. These low-lying islands are at extreme risk of inundation from tsunamis [@Reynolds:2017]. On March 11, 2011, a 9.0 earthquake hit the Tōhoku region of Japan. The earthquake lasted over 6 minutes, creating a tsunami that impacted coastal areas and island nations throughout the Pacific region. Approximately 20,000 people lost their lives from the earthquake and resulting tsunami. The tsunami also killed or injured thousands of marine and terrestrial species. Many wildlife species found in the Papahānaumokuākea Marine National Monument (PMNM) were impacted by the Tōhoku tsunami.
 
 ## Analysis Plan
 
-This statistical analysis will be testing the hypothesis if the Tōhoku tsunami impacted albatross populations in Hawaii. The table below outlines the phases of the analysis. 
+This statistical analysis tested the hypothesis if the Tōhoku tsunami impacted albatross populations in Hawaii. The table below outlines the phases of the analysis. 
 
 $$H_{0}: There\ was\ no\ impact\ of\ the\ Tōhoku\ tsunami\ on\ albatross\ populations\ in\ Hawaii.$$
 $$H_{1}: There\ was\ an\ impact\ of\ the\ Tōhoku\ tsunami\ on\ albatross\ populations\ in\ Hawaii.$$
@@ -118,6 +116,8 @@ data.frame("Phase" = c(1:5),
   column_spec(1, bold = T) %>%
   row_spec(0, bold = T, color = "black")
 ```
+
+_**Note**: The Short-tailed albatross was not included in this analysis as there is only one breeding pair in Hawaii._
 
 ## Collect Data
 
@@ -170,7 +170,7 @@ albie_sf <- st_as_sf(albie_band,
 Upon completion of data tidying and transformation, the next phase of analysis is to visualize the data. 
 
 #### Distribution Map
-The initial visualization was to map the banding data on to a map of Hawaii using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross in Hawaii. The only two main Hawaiian Islands where albatross nest are Kauai and Oahu. This map shows most albatross populations reside with the PMNM.
+The initial visualization mapped the banding data on to a map of Hawaii using the [ggmap() package](https://cran.r-project.org/web/packages/ggmap/readme/README.html). The banding data point distribution accurately reflects the known species distribution of both species of albatross in Hawaii. This map shows most albatross populations reside within the Papahānaumokuākea MNM. The only two main Hawaiian Islands where albatross nest are Kauai and Oahu. Due to the extensive length of the Hawaiian archipelago compared to the small size of the Northwestern Hawaiian Islands, each atoll is outlined with a grey box and the Hawaiian place name is indicated above the parameter box. The division between the Main Hawaiian Islands and the Papahanaumokuakea National Marine Monument is indicated by a dashed line on the map visualization. 
 
 ```{r create HI map, include=FALSE}
 # bounding box for Hawaii
@@ -187,6 +187,11 @@ albie_map <- ggmap(hawaii_map) +
              data = albie_band,
              size = 0.5,
              alpha = 0.25) +
+  geom_vline(xintercept = -163, linetype="dashed", color = "#0f173d") +
+  annotate('text', x = -170, y = 23, 
+           label = 'Papahanumokuakea Marine National Monument', color = 'black', size = 3, fontface = 'italic') +
+    annotate('text', x = -156.8, y = 23, 
+           label = 'Main Hawaiian Islands', color = 'black', size = 3, fontface = 'italic') +
   scale_color_manual(name = "Albatross species",
                      values = c("#9E7E8C", "#39ACB1"),
                      labels = c("Black-footed Albatross", "Laysan Albatross"),
@@ -428,7 +433,7 @@ pop_mean_table
 
 ## Conduct and Interpret Regression Analysis 
 
-To determine the distribution of the count data for both albatross species, I created Q-Q plots. 
+To determine the distribution of the count data for both albatross species, I created Q-Q plots, or probability plots. 
 The regression analysis used on the band count data was linear regression. 
 
 #### QQ Plot
@@ -545,9 +550,9 @@ Since the p-values are smaller than 0.05, the null hypothesis that there was no 
 
 ## Conclusion and Future Research
 
-In conclusion, the linear regression model predicts that there are significant negative relationships between the independent variable (years before and after tsunami) and the dependent variable (count of banded albatross). It was also found that a multiple regression with an interaction term based on the tsunami event impact of each albatross species is a better model fit. This analysis suggests that the Tōhoku tsunami had a negative impact on albatross populations in Hawaii. 
+In conclusion, the linear regression model predicts that there are significant negative relationships between the independent variable (years before and after tsunami) and the dependent variable (count of banded albatross). It was also found that a multiple regression with an interaction term based on the tsunami event impact of each albatross species is a better model fit. This analysis suggests that the Tōhoku tsunami had a negative long term impact on albatross populations in Hawaii. 
 
-For future analysis on the impact of the Tōhoku tsunami, I would like to research what other variables may be influencing the number of albatrosses being banded by biologist in Hawaii each year. I have a suspension that there has been reduced banding effort throughout the archipelago since the tsunami, especially in 2020 due to the pandemic. I do not know why there would be a reduction in banding effort, but this may be a significant influence on the count data used for this analysis. I would also like to contact researchers in Hawaii to determine if there is more comprehensive census data for albatross. 
+For future analysis on the impact of the Tōhoku tsunami, I would like to research what other variables may be influencing the number of albatrosses being banded by biologist in Hawaii each year. I have a suspicion that there was a reduced banding effort throughout the archipelago since the tsunami, especially in 2020 due to the COVID-19 pandemic. I am unsure  why there would be a reduction in banding effort immediately post-tsunami and prior to the pandemic, but this may be a significant influence on the count data used for this analysis. I would also like to contact researchers in Hawaii to determine if there is more comprehensive census data for albatross. 
 
 <figure>
 
