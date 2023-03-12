@@ -90,27 +90,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>Julia Parish</title>
 
-  <meta property="description" itemprop="description" content="Experienced Program Director with a passion for data science, spatial analysis, and conservation."/>
+  <meta property="description" itemprop="description" content="Natural Resource Specialist &amp; aspiring Environmental Data Scientist"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Julia Parish"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Experienced Program Director with a passion for data science, spatial analysis, and conservation."/>
+  <meta property="og:description" content="Natural Resource Specialist &amp; aspiring Environmental Data Scientist"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Julia Parish"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Julia Parish"/>
-  <meta property="twitter:description" content="Experienced Program Director with a passion for data science, spatial analysis, and conservation."/>
+  <meta property="twitter:description" content="Natural Resource Specialist &amp; aspiring Environmental Data Scientist"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Julia Parish"]},{"type":"character","attributes":{},"value":["Experienced Program Director with a passion for data science, spatial analysis, and conservation.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","code_folding","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Julia Parish"]},{"type":"character","attributes":{},"value":["Natural Resource Specialist & aspiring Environmental Data Scientist\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","code_folding","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -788,6 +788,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1860,15 +1861,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2385,7 +2392,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2405,7 +2412,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Julia Parish","description":"Experienced Program Director with a passion for data science, spatial analysis, and conservation.","authors":[]}
+{"title":"Julia Parish","description":"Natural Resource Specialist & aspiring Environmental Data Scientist","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2435,8 +2442,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Julia Parish</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Experienced Program Director with a passion for data science,
-spatial analysis, and conservation.</p></p>
+<p><p>Natural Resource Specialist &amp; aspiring Environmental Data Scientist</p></p>
 </div>
 
 
@@ -2445,25 +2451,15 @@ spatial analysis, and conservation.</p></p>
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#education"
-id="toc-education"><strong>Education</strong></a></li>
-<li><a href="#masters-capstone-project"
-id="toc-masters-capstone-project"><strong>Master’s Capstone
-Project</strong></a></li>
-<li><a href="#experience"
-id="toc-experience"><strong>Experience</strong></a></li>
-<li><a href="#undergraduate-research"
-id="toc-undergraduate-research"><strong>Undergraduate
-Research</strong></a></li>
-<li><a href="#certifications-licenses"
-id="toc-certifications-licenses">Certifications &amp; Licenses</a></li>
+<li><a href="#education" id="toc-education"><strong>Education</strong></a></li>
+<li><a href="#masters-capstone-project" id="toc-masters-capstone-project"><strong>Master’s Capstone Project</strong></a></li>
+<li><a href="#experience" id="toc-experience"><strong>Experience</strong></a></li>
+<li><a href="#undergraduate-research" id="toc-undergraduate-research"><strong>Undergraduate Research</strong></a></li>
+<li><a href="#certifications-licenses" id="toc-certifications-licenses">Certifications &amp; Licenses</a></li>
 <li><a href="#skills" id="toc-skills">Skills</a></li>
-<li><a href="#publications-articles"
-id="toc-publications-articles">Publications &amp; Articles</a></li>
-<li><a href="#presentations-posters"
-id="toc-presentations-posters">Presentations &amp; Posters</a></li>
-<li><a href="#professional-affiliations"
-id="toc-professional-affiliations">Professional Affiliations</a></li>
+<li><a href="#publications-articles" id="toc-publications-articles">Publications &amp; Articles</a></li>
+<li><a href="#presentations-posters" id="toc-presentations-posters">Presentations &amp; Posters</a></li>
+<li><a href="#professional-affiliations" id="toc-professional-affiliations">Professional Affiliations</a></li>
 </ul>
 </nav>
 </div>
@@ -2471,114 +2467,65 @@ id="toc-professional-affiliations">Professional Affiliations</a></li>
 <p><strong>Master of Environmental Data Science</strong> | June 2022
 <br> Bren School of Environmental Science &amp; Management
 <br> University of California, Santa Barbara</p>
-<p><strong>Bachelor of Arts in Interdisciplinary Studies: Environmental
-Studies</strong> | May 2007 <br> University of Hawaii at Manoa</p>
-<h2 id="masters-capstone-project"><strong>Master’s Capstone
-Project</strong></h2>
-<p><strong>Snow Today</strong>, 01/2022 to 06/2022<br>
-<strong>Role:</strong> Communications Manager | <strong>Client:</strong>
-UCSB Earth Research Institute <br> - Developed an interactive R Shiny
-web application to visualize snow cover and albedo data to expand data
-availability of remotely sensed snow data. <br> - Created data analysis,
-processing, and visualization tutorials in Python and wrote technical
-documentation to educate users on remotely sensed snow condition
-data.</p>
+<p><strong>Bachelor of Arts in Interdisciplinary Studies: Environmental Studies</strong> | May 2007
+<br> University of Hawaii at Manoa</p>
+<h2 id="masters-capstone-project"><strong>Master’s Capstone Project</strong></h2>
+<p><strong>Snow Today</strong>, 01/22 to 06/22<br>
+<strong>Role:</strong> Communications Manager | <strong>Client:</strong> UCSB Earth Research Institute <br>
+- Developed an interactive R Shiny web application to visualize snow cover and albedo data to expand data availability of remotely sensed snow data. <br>
+- Created data analysis, processing, and visualization tutorials in Python and wrote technical documentation to educate users on remotely sensed snow condition data.</p>
 <h2 id="experience"><strong>Experience</strong></h2>
-<p><strong>Center for Conservation Biology - UC Riverside</strong> |
-Remote, Riverside, CA <br>- <em>Data Science Fellow</em> | 07/20 to
-Present</p>
+<p><strong>USAG Presidio of Monterey</strong> | Monterey, CA <br>
+<em>Natural Resources Manager</em> | 12/22 to Present</p>
+<p><strong>Center for Conservation Biology - UC Riverside</strong> | Riverside, CA <br>
+<em>Data Science Fellow</em> | 07/22 to 09/22</p>
 <p><strong>American Conservation Experience</strong> | San Diego, CA
-<br>- <em>Restoration Specialist</em> | 04/20 to 07/21 <br>-
-<em>Director</em> | 06/18 to 04/20</p>
+<br>- <em>Restoration Specialist</em> | 04/20 to 07/21
+<br>- <em>Director</em> | 06/18 to 04/20</p>
 <p><strong>Catalina Island Conservancy</strong> | Avalon, CA <br>
 <em>Plant Conservation Manager</em> | 04/15 to 07/18</p>
 <p><strong>Oahu Invasive Species Committee</strong> | Honolulu, HI <br>
 <em>Director</em> | 12/12 to 04/15</p>
-<p><strong>Center for Conservation Research and Training at the
-University of Hawaii</strong> | Honolulu, HI and Papahanaumokuakea
-National Marine Monument <br> <em>CCRT Field Project Support
-Assistant</em> | 07/10 to 12/12</p>
-<p><strong>Center for Environmental Management of Military
-Lands</strong> | Hilo, HI <br>- <em>Botanist (Research Assistant I)</em>
-| 11/08 to 06/09 <br>- <em>Incipient Weed Control Biologist (Research
-Assistant II)</em> | 07/09 to 07/10</p>
-<p><strong>Oahu Invasive Species Committee</strong> | Honolulu, HI <br>-
-<em>Outreach Specialist</em> | 12/07 to 11/08 <br>- <em>Field Technician
-(AmeriCorps)</em> | 12/06 - 11/07</p>
-<h2 id="undergraduate-research"><strong>Undergraduate
-Research</strong></h2>
-<p><strong>Organization for Tropical Studies</strong> | La Selva
-Biological Station, Puerto Viejo de Sarapiqui, Costa Rica <br>
-<strong>National Science Foundation</strong> and <strong>Duke
-University</strong> Research Education for Undergraduates <br>
+<p><strong>Center for Conservation Research and Training at the University of Hawaii</strong> | Honolulu, HI and Papahanaumokuakea National Marine Monument <br>
+<em>CCRT Field Project Support Assistant</em> | 07/10 to 12/12</p>
+<p><strong>Center for Environmental Management of Military Lands</strong> | Hilo, HI
+<br>- <em>Botanist (Research Assistant I)</em> | 11/08 to 06/09
+<br>- <em>Incipient Weed Control Biologist (Research Assistant II)</em> | 07/09 to 07/10</p>
+<p><strong>Oahu Invasive Species Committee</strong> | Honolulu, HI
+<br>- <em>Outreach Specialist</em> | 12/07 to 11/08
+<br>- <em>Field Technician (AmeriCorps)</em> | 12/06 - 11/07</p>
+<h2 id="undergraduate-research"><strong>Undergraduate Research</strong></h2>
+<p><strong>Organization for Tropical Studies</strong> | La Selva Biological Station, Puerto Viejo de Sarapiqui, Costa Rica <br>
+<strong>National Science Foundation</strong> and <strong>Duke University</strong> Research Education for Undergraduates <br>
 <em>Research Fellow</em> | 06/06 - 08/06</p>
-<p><strong>Objective:</strong> Independent research study to detect
-secondary metabolites in ethnobotanically important plant species.</p>
+<p><strong>Objective:</strong> Independent research study to detect secondary metabolites in ethnobotanically important plant species.</p>
 <h2 id="certifications-licenses">Certifications &amp; Licenses</h2>
-<p><strong>Drone Camp</strong> – University of California Agriculture
-&amp; Natural Resources, 2022 <br> <strong>Cartography</strong> - ESRI
-MOCC, 2022 <br> <strong>Adult Mental Health First Aid</strong> - Mental
-Health First Aid USA, 2021 <br> <strong>Diversity &amp; Equity
-Training</strong> – Cream City Conservation &amp; Consulting, 2021 <br>
-<strong>California Qualified Applicator License</strong> – CA Department
-of Pesticide Regulation, 2017<br> <strong>Brown Treesnake Rapid Response
-Team</strong> - United States Geological Services, 2014<br></p>
+<p><strong>Drone Camp</strong> – University of California Agriculture &amp; Natural Resources, 2022 <br>
+<strong>Cartography</strong> - ESRI MOCC, 2022 <br>
+<strong>Adult Mental Health First Aid</strong> - Mental Health First Aid USA, 2021 <br>
+<strong>Diversity &amp; Equity Training</strong> – Cream City Conservation &amp; Consulting, 2021 <br>
+<strong>California Qualified Applicator License</strong> – CA Department of Pesticide Regulation, 2017<br>
+<strong>Brown Treesnake Rapid Response Team</strong> - United States Geological Services, 2014<br></p>
 <h2 id="skills">Skills</h2>
-<div class="line-block"><strong>Programming Languages:</strong> R,
-Python, SQL, familiar with HTML and CSS<br />
-<strong>Software:</strong> Anaconda Navigator, ESRI (ArcGIS, ArcGIS
-Pro), R Studio, Git, GitHub, Jupyter Lab, Jupyter Notebook, Binder,
-Google Earth Engine, Tableau Desktop, Tableau Prep, pgAdmin, QGIS,
-Microsoft Office Suite, Google Workspace, Zoom, Prezzi, Wix, Visual
-Studio Code<br />
-<strong>Project Management:</strong> Github Issues, Asana, Basecamp,
-Podio, Slack, Trello, Clockify, Zotero, Zenhub</div>
+<div class="line-block"><strong>Programming Languages:</strong> R, Python, SQL, familiar with HTML and CSS<br />
+<strong>Software:</strong> Anaconda Navigator, ESRI (ArcGIS, ArcGIS Pro), R Studio, Git, GitHub, Jupyter Lab, Jupyter Notebook, Binder, Google Earth Engine, Tableau Desktop, Tableau Prep, pgAdmin, QGIS, Microsoft Office Suite, Google Workspace, Zoom, Prezzi, Wix, Visual Studio Code<br />
+<strong>Project Management:</strong> Github Issues, Asana, Basecamp, Podio, Slack, Trello, Clockify, Zotero, Zenhub</div>
 <h2 id="publications-articles">Publications &amp; Articles</h2>
-<div class="line-block">Duffy, D., <strong>Parish, J.</strong>, et
-al. (2015). Has the Small Indian Mongoose Become Established on Kauai
-Island, Hawaii? <em>Pacific Science</em>, 69(4), 559-565. <a
-href="https://doi.org/10.2984/69.4.9"
-class="uri">https://doi.org/10.2984/69.4.9</a> <br><br />
-Mazurkiewicz, D., <strong>Parish, J.</strong>, et al. (2017).
-Restoration and Protection of the Archipelago’s Flora and Habitats: A
-New Era. <em>Fremontia</em>, 45(3), 26. <br><br />
-<strong>Parish, J.</strong> (2010). Targeting Pohakuloa’s “Most
-Un-Wanted”: The Incipient Weed Program at PTA. <em>Ecosystems Management
-Program Bulletin</em> 48, 4-6.</div>
+<div class="line-block">Gaynor, K., Azevedo, T., <strong>Parish, J.</strong>, et al. (2022). Ten simple rules to cultivate belonging incollaborative data science research teams. <strong>PLOS Computational Biology</strong>. <a href="https://doi.org/10.1371/journal.pcbi.1010567" class="uri">https://doi.org/10.1371/journal.pcbi.1010567</a> <br><br />
+Duffy, D., <strong>Parish, J.</strong>, et al. (2015). Has the Small Indian Mongoose Become Established on Kauai Island, Hawaii? <em>Pacific Science</em>, 69(4), 559-565. <a href="https://doi.org/10.2984/69.4.9" class="uri">https://doi.org/10.2984/69.4.9</a> <br><br />
+Mazurkiewicz, D., <strong>Parish, J.</strong>, et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. <em>Fremontia</em>, 45(3), 26. <br><br />
+<strong>Parish, J.</strong> (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. <em>Ecosystems Management Program Bulletin</em>, 48, 4-6.</div>
 <h2 id="presentations-posters">Presentations &amp; Posters</h2>
-<div class="line-block"><strong>Parish, J.</strong> “Implementing an
-Early Detection Program on Catalina Island: Prioritizing Landscaped
-Grasses” Poster. <em>Island Invasives Symposium</em>. Dundee, Scotland.
-2017. <br><br />
-<strong>Parish, J.</strong> “Prioritizing <em>Miconia calvescens</em>
-Survey on Oahu” Presentation. <em>California Invasive Plant Council
-Symposium</em>, San Diego, CA. 2015. <br><br />
-Saunter, M., Nimz, I., Worcester, N., Vanderlip, C., <strong>Parish,
-J.</strong>, Marie, A. “Adapting Habitat Management to a Newly Colonized
-Indigenous Plant on Kure Atoll” Poster. <em>Hawaii Conservation
-Conference</em>. Honolulu, HI. July 2013.<br><br />
-<strong>Parish, J.</strong> “The Incipient Weed Program at Pohakuloa
-Training Area, Hilo, HI” Poster. <em>Hawaii Conservation
-Conference</em>. Honolulu, HI. 2010. <br><br />
-<strong>Parish, J.</strong> and Fincher, R. M. “Bioassay of Secondary
-Metabolites in Ethnobotanically Important Plant Species: The detection
-and response of <em>Paraponera clavata</em> to chemical compounds in
-plants.” Presentation. <em>NSF REU Internship Summer Research
-Project</em>. La Selva Biological Field Station Puerto Viejo de
-Sarapiqui, Costa Rica. 2006. <br></div>
+<div class="line-block"><strong>Parish, J.</strong> “Implementing an Early Detection Program on Catalina Island: Prioritizing Landscaped Grasses” Poster. <em>Island Invasives Symposium</em>. Dundee, Scotland. 2017. <br><br />
+<strong>Parish, J.</strong> “Prioritizing <em>Miconia calvescens</em> Survey on Oahu” Presentation. <em>California Invasive Plant Council Symposium</em>, San Diego, CA. 2015. <br><br />
+Saunter, M., Nimz, I., Worcester, N., Vanderlip, C., <strong>Parish, J.</strong>, Marie, A. “Adapting Habitat Management to a Newly Colonized Indigenous Plant on Kure Atoll” Poster. <em>Hawaii Conservation Conference</em>. Honolulu, HI. July 2013.<br><br />
+<strong>Parish, J.</strong> “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI” Poster. <em>Hawaii Conservation Conference</em>. Honolulu, HI. 2010. <br></div>
 <h2 id="professional-affiliations">Professional Affiliations</h2>
-<p><strong>Board Member, Secretary, President</strong> | California
-Invasive Plant Council 2017 – 2021<br> <strong>Member</strong> |
-California Native Plant Society 2016 – Present<br>
-<strong>Member</strong> | Society for Ecological Restoration 2019 –
-2021<br> <strong>Member</strong> | San Diego County Weed Management Area
-2018 – 2021<br> <strong>Board Member</strong> | Friends of the Hawaiian
-Island National Wildlife Refuges 2017 – 2019<br> <strong>Board
-Member</strong> | Southern California Botanical Society 2017 - 2018<br>
-<strong>Member</strong> | Los Angeles County Weed Management Area 2015 -
-2018<br></p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><strong>Board Member, Secretary, President</strong> | California Invasive Plant Council 2017 – 2021<br>
+<strong>Member</strong> | California Native Plant Society 2016 – Present<br>
+<strong>Member</strong> | Society for Ecological Restoration 2019 – 2021<br>
+<strong>Member</strong> | San Diego County Weed Management Area 2018 – 2021<br></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

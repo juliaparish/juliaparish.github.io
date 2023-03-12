@@ -1,7 +1,7 @@
 ---
 title: "Julia Parish"
 description: |
- Experienced Program Director with a passion for data science, spatial analysis, and conservation.
+ Natural Resource Specialist & aspiring Environmental Data Scientist
 output:
   distill::distill_article:
     self_contained: false
@@ -24,15 +24,18 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>&nbsp;University of Hawaii at Manoa
 
 ## **Master's Capstone Project**
-**Snow Today**, 01/2022 to 06/2022<br>
+**Snow Today**, 01/22 to 06/22<br>
 **Role:** Communications Manager | **Client:** UCSB Earth Research Institute <br> 
 -	Developed an interactive R Shiny web application to visualize snow cover and albedo data to expand data availability of remotely sensed snow data. <br>
 -	Created data analysis, processing, and visualization tutorials in Python and wrote technical documentation to educate users on remotely sensed snow condition data.
 
 ## **Experience**
 
-**Center for Conservation Biology - UC Riverside** | Remote, Riverside, CA
-<br>- *Data Science Fellow* | 07/20 to Present
+**USAG Presidio of Monterey** | Monterey, CA <br> 
+*Natural Resources Manager* | 12/22 to Present
+
+**Center for Conservation Biology - UC Riverside** | Riverside, CA <br> 
+*Data Science Fellow* | 07/22 to 09/22
 
 **American Conservation Experience** | San Diego, CA
 <br>- *Restoration Specialist* | 04/20 to 07/21
@@ -81,9 +84,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Publications & Articles
 
+| Gaynor, K., Azevedo, T., **Parish, J.**, et al. (2022). Ten simple rules to cultivate belonging incollaborative data science research teams. **PLOS  Computational Biology**. https://doi.org/10.1371/journal.pcbi.1010567 <br>
 | Duffy, D., **Parish, J.**, et al. (2015). Has the Small Indian Mongoose Become Established on Kauai Island, Hawaii? *Pacific Science*, 69(4), 559-565. https://doi.org/10.2984/69.4.9 <br>
 | Mazurkiewicz, D., **Parish, J.**, et al. (2017). Restoration and Protection of the Archipelago’s Flora and Habitats: A New Era. *Fremontia*, 45(3), 26. <br>
-| **Parish, J.** (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. *Ecosystems Management Program Bulletin* 48, 4-6.
+| **Parish, J.** (2010). Targeting Pohakuloa’s “Most Un-Wanted”: The Incipient Weed Program at PTA. *Ecosystems Management Program Bulletin*, 48, 4-6.
 
 ## Presentations & Posters
 
@@ -91,7 +95,6 @@ knitr::opts_chunk$set(echo = TRUE)
 | **Parish, J.** “Prioritizing *Miconia calvescens* Survey on Oahu” Presentation. *California Invasive Plant Council Symposium*, San Diego, CA. 2015. <br>
 | Saunter, M., Nimz, I., Worcester, N., Vanderlip, C., **Parish, J.**, Marie, A. “Adapting Habitat Management to a Newly Colonized Indigenous Plant on Kure Atoll” Poster. *Hawaii Conservation Conference*. Honolulu, HI. July 2013.<br>
 | **Parish, J.** “The Incipient Weed Program at Pohakuloa Training Area, Hilo, HI” Poster. *Hawaii Conservation Conference*. Honolulu, HI. 2010. <br>
-| **Parish, J.** and Fincher, R. M. “Bioassay of Secondary Metabolites in Ethnobotanically Important Plant Species: The detection and response of *Paraponera clavata* to chemical compounds in plants.” Presentation. *NSF REU Internship Summer Research Project*. La Selva Biological Field Station Puerto Viejo de Sarapiqui, Costa Rica. 2006. <br>
 
 ## Professional Affiliations
 
@@ -99,9 +102,7 @@ knitr::opts_chunk$set(echo = TRUE)
 **Member** | California Native Plant Society 2016 – Present<br>
 **Member** | Society for Ecological Restoration 2019 – 2021<br>
 **Member** | San Diego County Weed Management Area 2018 – 2021<br> 
-**Board Member** | Friends of the Hawaiian Island National Wildlife Refuges 2017 – 2019<br>
-**Board Member** | Southern California Botanical Society 2017 - 2018<br>
-**Member** | Los Angeles County Weed Management Area 2015 - 2018<br>
+
 
 
 
